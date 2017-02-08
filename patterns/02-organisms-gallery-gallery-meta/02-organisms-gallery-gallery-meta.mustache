@@ -1,0 +1,8 @@
+&lt;div class=&quot;gallery-meta&quot;&gt;
+  &lt;div class=&quot;gallery-counter&quot; data-bind=&quot;if: isGalleryActive &amp;&amp; isGalleryContentSlide&quot;&gt;
+	{{#introSlide?}}
+		&lt;span data-bind=&quot;text: currentSlideNum&quot;&gt;{{currentSlideCount}}&lt;/span&gt;/&lt;span data-bind=&quot;text: totalSlideCount&quot;&gt;{{totalSlideCount}}&lt;/span&gt;
+	{{/introSlide?}}
+  &lt;/div&gt;
+  &lt;div class=&quot;media__credit&quot; data-bind=&quot;text: currentSlide().imageCredit&quot;&gt;{{imageCredit}}&lt;/div&gt;
+&lt;/div&gt;

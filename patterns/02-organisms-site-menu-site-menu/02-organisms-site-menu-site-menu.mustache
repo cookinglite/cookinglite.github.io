@@ -1,0 +1,35 @@
+&lt;div class=&quot;site-menu&quot;&gt;
+  &lt;div class=&quot;site-menu__header&quot;&gt;
+    &lt;a class=&quot;site-menu__logo&quot; href=&quot;{{ home_url }}&quot;&gt;
+      &lt;svg class=&quot;icon icon-logo&quot;&gt;
+        {{&gt; molecules-svg-use-tag }}
+      &lt;/svg&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;site-menu__close&quot;&gt;
+     &lt;svg class=&quot;icon icon-close&quot;&gt;
+       &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-close&quot;&gt;&lt;/use&gt;
+     &lt;/svg&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;site-menu__content&quot;&gt;
+    &lt;div class=&quot;site-menu__search&quot;&gt;
+      {{&gt; organisms-search-bar }}
+    &lt;/div&gt;
+
+    {{&gt; molecules-primary-menu }}
+
+    &lt;div class=&quot;site-menu__insert&quot;&gt;
+      {{&gt; molecules-menu-subscribe }}
+    &lt;/div&gt;
+
+    {{&gt; molecules-secondary-menu }}
+
+    &lt;div class=&quot;site-menu__footer&quot;&gt;
+      &lt;div class=&quot;social-list&quot;&gt;
+      {{#social_share}}
+          {{&gt; molecules-social-share }}
+      {{/social_share}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;

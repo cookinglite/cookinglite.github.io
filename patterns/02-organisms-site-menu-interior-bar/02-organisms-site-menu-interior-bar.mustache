@@ -1,0 +1,25 @@
+{{#interior_bar}}
+&lt;div class=&quot;interior-bar&quot;&gt;
+  &lt;div class=&quot;interior-bar__section&quot;&gt;
+    &lt;a class=&quot;interior-bar__link&quot; href=&quot;{{home_url}}&quot;&gt;
+      &lt;svg class=&quot;icon icon-bug&quot;&gt;
+        &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-ckl-bug&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;interior-bar__section interior-bar__section-action&quot;&gt;
+    &lt;a href=&quot;{{subscribe_url}}&quot; class=&quot;interior-bar__text-link&quot;&gt;{{subscribe_text}}&lt;/a&gt;
+
+    &lt;div class=&quot;interior-bar__social&quot;&gt;
+        {{#social_share}}
+            {{&gt; molecules-social-share }}
+        {{/social_share}}
+    &lt;/div&gt;
+
+    &lt;a href=&quot;{{next_url}}&quot; class=&quot;interior-bar__section-link link-with-arrow&quot;&gt;
+      Next
+    &lt;/a&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+{{/interior_bar}}

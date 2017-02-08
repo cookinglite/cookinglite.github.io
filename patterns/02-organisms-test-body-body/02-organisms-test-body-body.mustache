@@ -1,0 +1,19 @@
+{{! This partial is a test to show how a key can have two values. A string value or a structured array value.
+This partial will render a body element if the value is a string for a list [array]}}
+{{! The way to accomplish this is that the partial (such as this one) knows the key that it need to render.
+For example - this partial should be included as partial when there is a 'body' key. This partial will look for that
+key aand render it appropriately.}}
+
+{{#body}}
+    {{! render the literal value of the body if it's not a structured array }}
+    {{! This requires a patch to the Mustache Compiler - Or it will print as 'Array'
+    see -- pattern-lab/patches/fix-printing-array-value.diff}}
+    {{{body}}}
+
+    {{! if the body is an array the following partials will be invoked depending on the key }}
+    {{! of a key of 'text' on the 'body' this will run }}
+    {{&gt; organisms-texttest}}
+    {{! of a key of 'image' on the 'body' this will run }}
+    {{&gt; organisms-imagetest}}
+
+{{/body}}

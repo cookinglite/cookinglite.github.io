@@ -1,0 +1,27 @@
+&lt;div class=&quot;related-articles__story&quot;&gt;
+    &lt;a href=&quot;{{url}}&quot; class=&quot;related-articles__media&quot;&gt;
+        &lt;img src=&quot;{{img}}&quot; alt=&quot;{{alt}}&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;related-articles__body&quot;&gt;
+        {{#category}}
+            &lt;span class=&quot;related-articles__text-sm&quot;&gt;{{category}}&lt;/span&gt;
+        {{/category}}
+
+        &lt;a href=&quot;{{url}}&quot; class=&quot;related-articles__title&quot;&gt;{{{title}}}&lt;/a&gt;
+
+        {{#cta}}
+            &lt;a href=&quot;{{url}}&quot; class=&quot;link-with-arrow link-with-arrow--fresh related-articles__text-sm related-articles__cta&quot;&gt;{{cta}}&lt;/a&gt;
+        {{/cta}}
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            var CKL = {} || CKL;
+            CKL.related_content = CKL.related_content || [];
+            CKL.related_content.push({
+                url: &quot;{{url}}&quot;,
+                alt: &quot;{{alt}}&quot;,
+                title: &quot;{{title}}&quot;,
+                category: &quot;{{category}}&quot;,
+                cta: &quot;{{cta}}&quot;
+            });
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/div&gt;

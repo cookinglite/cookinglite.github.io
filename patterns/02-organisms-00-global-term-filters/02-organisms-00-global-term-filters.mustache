@@ -1,0 +1,18 @@
+&lt;div class=&quot;term-filters&quot;&gt;
+  &lt;div class=&quot;term-filters__wrap&quot;&gt;
+    &lt;div class=&quot;term-filters__section&quot;&gt;
+      &lt;h3 class=&quot;term-set__title&quot;&gt;{{title}}&lt;/h3&gt;
+      {{&gt; organisms-term-set }}
+    &lt;/div&gt;
+
+    &lt;div class=&quot;btn-wrap&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn-ghost&quot;
+      data-js-component=&quot;toggleFilterDisplay&quot;
+      data-filter=&quot;.filter-panel&quot;&gt;Filters&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  {{#filter_panel}}
+   {{&gt; organisms-filter-panel }}
+  {{/filter_panel}}
+&lt;/div&gt;

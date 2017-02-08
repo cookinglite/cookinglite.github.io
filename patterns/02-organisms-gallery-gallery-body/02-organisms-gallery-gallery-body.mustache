@@ -1,0 +1,30 @@
+&lt;div class=&quot;gallery__body article__body&quot;&gt;
+
+    {{! render the literal value of the body if it's not a structured array }}
+    {{! This requires a patch to the Mustache Compiler - Or it will print as 'Array'
+    see -- pattern-lab/patches/fix-printing-array-value.diff}}
+
+    {{{body}}}
+
+    {{&gt; organisms-article-text }}
+
+    {{! this is the slide view of the gallery}}
+    {{#gallery}}
+        {{&gt; organisms-gallery }}
+    {{/gallery}}
+
+    {{! this is the list view of the gallery}}
+    {{#gallery_list}}
+        &lt;div class=&quot;gallery-listicle&quot;&gt;
+            {{&gt; organisms-gallery-header-bottom }}
+            {{&gt; organisms-gallery-listicle }}
+        &lt;/div&gt;
+    {{/gallery_list}}
+
+    {{&gt; atoms-outbrain-6x1-placeholder }}
+
+    {{#related_content}}
+        {{&gt; organisms-related-content }}
+    {{/related_content}}
+
+&lt;/div&gt;

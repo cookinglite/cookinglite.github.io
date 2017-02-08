@@ -1,0 +1,18 @@
+&lt;video {{#width}}width=&quot;{{width}}&quot;{{/width}}
+    {{#height}}height=&quot;{{height}}&quot;{{/height}}
+     data-disable-plugindev=&quot;{{#iris_disable}}true{{/iris_disable}}{{^iris_disable}}false{{/iris_disable}}&quot;
+    {{#sticky_play}} data-stickyplay=&quot;desktop&quot; {{/sticky_play}}
+    data-viewplay=&quot;{{#view_play}}true{{/view_play}}{{^view_play}}false{{/view_play}}&quot;
+     data-autoplay=&quot;{{#auto_start}}true{{/auto_start}}{{^auto_start}}false{{/auto_start}}&quot;
+    {{#play_inline}} playsinline {{/play_inline}}
+    {{^disable_controls}} controls {{/disable_controls}}
+        data-account=&quot;{{bc_player_account}}&quot;
+        data-video-id=&quot;{{video_id}}&quot;
+        data-player=&quot;{{player_id}}&quot;
+        data-embed=&quot;default&quot;
+        data-application-id
+        class=&quot;video-js&quot;
+        &gt;&lt;/video&gt;
+{{#embed_jumpstart}}
+    &lt;script src=&quot;//cdn.video.timeinc.com/jumpstart/v1/js/jumpstart.min.js&quot;&gt;&lt;/script&gt;
+{{/embed_jumpstart}}

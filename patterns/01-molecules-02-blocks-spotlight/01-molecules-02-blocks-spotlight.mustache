@@ -1,0 +1,25 @@
+{{!
+*
+* Spotlight Module
+*
+* @param string img     String of image URL.
+* @param string img_alt String of text for image alternate text.
+* @param string quote   String of text for quote section.
+* @param string attr    Spotlight quote attribution text.
+* @param string cta     CTA text for spotlight.
+*
+}}
+
+&lt;div class=&quot;spotlight&quot;&gt;
+	&lt;div class=&quot;spotlight__img&quot;&gt;
+		&lt;img src=&quot;{{img}}&quot; alt=&quot;{{img_alt}}&quot; data-pin-nopin=&quot;true&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;spotlight__content&quot;&gt;
+		&lt;h2 class=&quot;spotlight__content-title&quot;&gt;Quote of the day&lt;/h2&gt;
+		&lt;blockquote class=&quot;&quot;&gt;{{quote}}&lt;/blockquote&gt;
+		&lt;footer class=&quot;spotlight__footer&quot;&gt;
+			&lt;cite&gt;{{attr}}&lt;/cite&gt;
+		&lt;/footer&gt;
+		&lt;a href=&quot;{{url}}&quot; class=&quot;spotlight__cta&quot;&gt;{{cta}}&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;

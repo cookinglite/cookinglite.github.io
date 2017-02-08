@@ -1,0 +1,32 @@
+{{# gallery_endslate}}
+  &lt;div class=&quot;gallery__outro-slide&quot;&gt;
+    {{# outbrain_endslate}}
+      {{&gt; atoms-outbrain-endslate }}
+    {{/ outbrain_endslate}}
+  
+    &lt;div class=&quot;gallery__outro-content&quot;&gt;
+      &lt;div class=&quot;g-wrap&quot;&gt;
+        {{# more_slideshows}}
+          &lt;div class=&quot;gallery__outro-content-title&quot;&gt;{{title}}&lt;/div&gt;
+          {{# items}}
+            &lt;div class=&quot;g-span-xs-6 g-span-sm-6&quot;&gt;
+              &lt;div class=&quot;story-card&quot;&gt;
+                &lt;div class=&quot;story-card__media&quot;&gt;
+                  &lt;a href=&quot;{{url}}&quot; class=&quot;story-card__link&quot;&gt;
+                    &lt;div class=&quot;media-wrap&quot;&gt;
+                      &lt;img src=&quot;{{img}}&quot; alt=&quot;{{alt}}&quot;&gt;
+                    &lt;/div&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;story-card__body&quot;&gt;
+                  &lt;span class=&quot;story-card__category&quot;&gt;{{category}}&lt;/span&gt;
+                  &lt;a href=&quot;{{url}}&quot; class=&quot;story-card__title&quot;&gt;{{{text}}}&lt;/a&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          {{/ items}}
+        {{/ more_slideshows}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+{{/ gallery_endslate}}

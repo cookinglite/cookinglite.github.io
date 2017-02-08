@@ -1,0 +1,28 @@
+{{!
+*
+* Related List Module
+*
+* @param array items      Array of related-article content, required
+* @param string url       URL of linked content, required
+* @param string img       String of image url, required
+* @param string alt       String of text for image alternate text, required
+* @param string title     String of text for title of related list item, required
+* @param string category  String of text to display the category, optional
+* @param string cta       String of text for CTA, optional
+*
+}}
+
+{{#related_articles}}
+&lt;div class=&quot;related-articles&quot;&gt;
+  {{#accent_header}}
+    {{&gt; molecules-accent-header }}
+  {{/accent_header}}
+
+  {{#items}}
+        {{&gt; molecules-tout-400x300}}
+      {{^title}}
+          {{{items}}}
+      {{/title}}
+  {{/items}}
+&lt;/div&gt;
+{{/related_articles}}

@@ -1,0 +1,44 @@
+&lt;script&gt;
+
+
+    var tgx_ad_callback_ad_leaderboard_responsive = function (event, sizes, breakpoint, oldBreakpoint) {
+        var body = document.getElementsByTagName('body')[0];
+        var className = 'has-leaderboard';
+        if (event === 'render' &amp;&amp; this.id == 'ad-728x90_970x250_970x90_101x1_320x50_ATF') {
+            if (body.classList) {
+                body.classList.add(className);
+            }
+            else {
+                body.className += ' ' + className;
+            }
+        }
+        else if (event === 'remove') {
+
+            if (body.classList) {
+                body.classList.remove(className);
+            }
+            else {
+                body.className = body.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            }
+
+        }
+        else if (event === 'rendered') {
+
+        }
+    };
+
+    tgx_ad_slots.push(function(ads){
+
+        ads.addSlot({
+            id: {{#ad_id}}'{{ad_id}}'{{/ad_id}}{{^ad_id}}'ad-728x90_970x250_970x90_101x1_320x50_ATF'{{/ad_id}},
+            responsive: {
+                md: {sizes: ['728x90','101x1'], callback: tgx_ad_callback_ad_leaderboard_responsive },
+                lg: {sizes: [{{#billboard}}'994x250','970x250','970x90','970x66','970x50',{{/billboard}}{{#gallery_billboard}}'970x90','970x66','970x50',{{/gallery_billboard}}'728x90','101x1'], callback: tgx_ad_callback_ad_leaderboard_responsive },
+                xl: {sizes: [{{#billboard}}'994x250','970x250','970x90','970x66','970x50',{{/billboard}}{{#gallery_billboard}}'970x90','970x66','970x50',{{/gallery_billboard}}'728x90','101x1'], callback: tgx_ad_callback_ad_leaderboard_responsive }
+            },
+            position: 1
+        });
+
+    });
+
+&lt;/script&gt;

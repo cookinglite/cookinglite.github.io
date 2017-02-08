@@ -1,0 +1,26 @@
+{{#featured_story_three_up}}
+  &lt;div class=&quot;featured-story featured-story--three-up {{#social_share}}has-social-share{{/social_share}}&quot;&gt;
+    &lt;div class=&quot;media media-wrap featured-story__media-wrap&quot;&gt;
+      {{#media}}
+        &lt;img class=&quot;featured-story__img&quot; src=&quot;{{src}}&quot; alt=&quot;{{alt}}&quot;&gt;
+      {{/media}}
+
+
+      {{#social_share}}
+        {{&gt; molecules-social-share }}
+      {{/social_share}}
+    &lt;/div&gt;
+    &lt;div class=&quot;featured-story__body&quot;&gt;
+      &lt;div class=&quot;featured-story__content&quot;&gt;
+        &lt;span class=&quot;featured-story__category&quot;&gt;{{category}}&lt;/span&gt;
+        &lt;h2 class=&quot;featured-story__title&quot;&gt;{{title}}&lt;/h2&gt;
+        {{#description}}
+          &lt;div class=&quot;featured-story__description&quot;&gt;Chocolate chip, sugar, peanut butter or biscotti&mdash;we have a recipe for you no matter what cookie you're craving.&lt;/div&gt;
+        {{/description}}
+        {{#cta}}
+        &lt;a href=&quot;{{url}}&quot; class=&quot;btn btn--centered link-with-arrow&quot;&gt;{{cta}}&lt;/a&gt;
+        {{/cta}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+{{/featured_story_three_up}}

@@ -1,0 +1,15 @@
+&lt;div class=&quot;show-at-md&quot;&gt;
+  &lt;ul class=&quot;breadcrumbs&quot;&gt;
+    {{#items}}
+      &lt;li class=&quot;breadcrumbs__crumb&quot;&gt;
+        {{#url}}
+        &lt;a class=&quot;breadcrumbs__crumb-link {{#is_active?}}breadcrumbs__crumb-link--is-active{{/is_active?}}&quot; href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;
+        {{/url}}
+
+        {{^url}}
+        &lt;span class=&quot;breadcrumbs__crumb-text &quot;&gt;{{{text}}}&lt;/span&gt;
+        {{/url}}
+      &lt;/li&gt;
+    {{/items}}
+  &lt;/ul&gt;
+&lt;/div&gt;

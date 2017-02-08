@@ -1,0 +1,37 @@
+
+{{#site_footer}}
+&lt;footer class=&quot;site-footer&quot;&gt;
+  &lt;div class=&quot;site-footer__container&quot;&gt;
+
+    &lt;div class=&quot;site-footer__group&quot;&gt;
+      {{&gt; molecules-brand-social }}
+    &lt;/div&gt;
+
+    &lt;div class=&quot;site-footer__group&quot;&gt;
+      {{#link_group}}
+        &lt;div class=&quot;site-footer__link-group&quot;&gt;
+          {{#links}}
+              &lt;a href=&quot;{{url}}&quot; class=&quot;site-footer__link&quot; {{#external?}} target=&quot;_blank&quot; {{/external?}}&gt;{{text}}&lt;/a&gt;
+          {{/links}}
+        &lt;/div&gt;
+      {{/link_group}}
+    &lt;/div&gt;
+  &lt;/div&gt;
+  {{&gt; molecules-footer-copyright }}
+&lt;/footer&gt;
+
+  {{#ad_300x50}}
+    &lt;div class=&quot;hide-at-sm&quot;&gt;
+      {{&gt; molecules-ads-300x50 }}
+    &lt;/div&gt;
+  {{/ad_300x50}}
+
+{{&gt; molecules-programmatic-gum-gum }}
+{{^disable_1x5}}
+  {{&gt; molecules-ads-1x5 }}
+{{/disable_1x5}}
+
+{{/site_footer}}
+
+
+

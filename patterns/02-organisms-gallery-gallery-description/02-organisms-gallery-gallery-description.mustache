@@ -1,0 +1,14 @@
+&lt;div class=&quot;gallery-description&quot;&gt;
+
+  {{&gt; organisms-article-meta }}
+
+  {{&gt; organisms-article-lead }}
+
+  &lt;div class=&quot;gallery-description__content&quot;&gt;
+    {{{description_text}}}
+
+    {{#next_slide_url}}
+    &lt;a href=&quot;{{next_slide_url}}&quot; class=&quot;btn link-with-arrow btn--start&quot; data-bind=&quot;click: gotoNextSlide, clickBubble: false&quot;&gt;{{btn_text}}&lt;/a&gt;
+    {{/next_slide_url}}
+  &lt;/div&gt;
+&lt;/div&gt;

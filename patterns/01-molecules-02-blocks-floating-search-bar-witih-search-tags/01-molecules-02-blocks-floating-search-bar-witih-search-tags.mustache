@@ -1,0 +1,20 @@
+{{#floating_search_bar}}
+&lt;div class=&quot;floating-search-bar search-bar&quot;&gt;
+  &lt;div class=&quot;search-bar__wrap&quot;&gt;
+    &lt;form class=&quot;form-inline search-form&quot; action=&quot;{{ form_action }}&quot;&gt;
+      &lt;input class=&quot;form-control search-bar__input&quot; type=&quot;text&quot; placeholder=&quot;{{placeholder_text}}&quot;&gt;
+      &lt;button class=&quot;btn form-btn search-bar__btn&quot;&gt;
+        Search
+      &lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+
+  {{#search_tags}}
+    {{&gt; organisms-search-tags }}
+  {{/search_tags}}
+
+    {{#subscribe_flyout}}
+  {{&gt; organisms-subscribe-button-flyout }}
+  {{/subscribe_flyout}}
+&lt;/div&gt;
+{{/floating_search_bar}}

@@ -1,0 +1,21 @@
+&lt;div class=&quot;site-header__bar hide-at-md&quot;&gt;
+  &lt;div class=&quot;site-header__wrap&quot;&gt;
+    &lt;div class=&quot;glance-bar&quot;&gt;
+      &lt;div class=&quot;glance-bar__section&quot;&gt;
+        {{#url}}
+          &lt;a class=&quot;glance-bar__link&quot; href=&quot;{{url}}&quot;&gt;
+            {{text}}
+          &lt;/a&gt;
+        {{/url}}
+      &lt;/div&gt;
+      &lt;div class=&quot;glance-bar__section&quot;&gt;
+        {{#subscribe_url}}
+          &lt;a class=&quot;glance-bar__link glance-bar__link--dark&quot; target=&quot;_blank&quot; href=&quot;{{subscribe_url}}&quot;&gt;
+            {{subscribe_text}}
+          &lt;/a&gt;
+        {{/subscribe_url}}
+        {{&gt; molecules-ads-cm-header-menu }}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;

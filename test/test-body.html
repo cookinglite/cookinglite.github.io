@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Body Code</title>
+    <script src="../../core/mustachejs/mustache.js"></script>
+    <script>
+        var template="";
+        template += "BODY";
+        template += "{{#body}}";
+        template += "";
+        template += "    {{{body}}}";
+        template += "";
+        template += "    {{#text}}";
+        template += "";
+        template += "        RENDERING CONTENT";
+        template += "        {{text}}";
+        template += "";
+        template += "    {{\/text}}";
+        template += "    {{#image}}";
+        template += "";
+        template += "        RENDERING IMAGE - {{image}} -";
+        template += "        {{image}}";
+        template += "        {{#src}}";
+        template += "            <img src=\"{{{src}}}\" alt=\"{{alt}}\" \/>";
+        template += "        {{\/src}}";
+        template += "    {{\/image}}";
+        template += "{{\/body}}";
+
+
+
+        var view = {
+            "body": [
+                {
+                    "text": "this is content 1"
+                },
+                {
+                    "image": {
+                        "src": "http://URL",
+                        "alt": "alt text"
+                    }
+                },
+                {
+                    "image": "this is image 2"
+                },
+                {
+                    "text": "this is content 2"
+                },
+                {
+                    "image": "this is image 3"
+                },
+                {
+                    "text": "this is content 3"
+                }
+            ]
+        };
+        var output = Mustache.render(template, view);
+        console.log(output);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

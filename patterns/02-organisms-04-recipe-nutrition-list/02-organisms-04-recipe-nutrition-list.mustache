@@ -1,0 +1,16 @@
+&lt;div class=&quot;nutrition-list&quot;
+  data-js-component=&quot;nutritionList&quot;
+  data-accordion-panel=&quot;.nutrition-list&quot;
+  data-accordion-content=&quot;.list&quot;
+  data-accordion-trigger=&quot;.nutrition-list__title&quot;
+&gt;
+  &lt;h3 class=&quot;nutrition-list__title&quot;&gt;{{title}}
+    &lt;svg class=&quot;icon icon-{{icon}} nutrition-list__icon&quot;&gt;
+      {{&gt; molecules-svg-use-tag }}
+    &lt;/svg&gt;
+  &lt;/h3&gt;
+
+  {{#list_with_divider}}
+    {{&gt; molecules-list-with-divider}}
+  {{/list_with_divider}}
+&lt;/div&gt;

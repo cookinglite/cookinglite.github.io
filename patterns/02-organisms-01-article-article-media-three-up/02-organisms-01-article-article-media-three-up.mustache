@@ -1,0 +1,27 @@
+{{#three_up_media}}
+&lt;div class=&quot;article__media {{#stretch?}}article__media--stretch{{/stretch?}} {{#left?}}article__media--pl{{/left?}}&quot;&gt;
+&lt;figure class=&quot;media media--three-up&quot;&gt;
+    &lt;div class=&quot;media--three-up-wrap&quot;&gt;
+      {{#images}}
+        &lt;img class=&quot;media__img&quot; src=&quot;{{media_src}}&quot; alt=&quot;{{media_alt}}&quot;&gt;
+      {{/images}}
+
+      {{#social_share}}
+        &lt;div class=&quot;show-at-sm&quot;&gt;
+          {{&gt;molecules-social-share}}
+        &lt;/div&gt;
+      {{/social_share}}
+    &lt;/div&gt;
+  &lt;figcaption&gt;
+
+    {{#credit}}
+      &lt;span class=&quot;media__text media__credit&quot;&gt;{{{credit}}}&lt;/span&gt;
+    {{/credit}}
+    {{#caption}}
+      &lt;div class=&quot;media__text media__caption&quot;&gt;{{{caption}}}&lt;/div&gt;
+    {{/caption}}
+
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+{{/three_up_media}}

@@ -1,0 +1,21 @@
+&lt;div class=&quot;recipe__body-aside&quot;&gt;
+
+    {{{sidebar}}}
+
+    {{#article_text}}
+        {{&gt; organisms-article-text }}
+    {{/article_text}}
+
+    {{#recipe_list}}
+        {{&gt; organisms-recipe-list }}
+    {{/recipe_list}}
+
+    {{#chicory_enabled?}}
+        {{&gt; organisms-chicory-button }}
+    {{/chicory_enabled?}}
+
+    {{#nutrition_list}}
+        {{&gt; organisms-nutrition-list }}
+    {{/nutrition_list}}
+
+&lt;/div&gt;

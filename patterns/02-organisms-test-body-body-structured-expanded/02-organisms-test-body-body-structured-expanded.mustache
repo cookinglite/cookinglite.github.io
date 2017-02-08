@@ -1,0 +1,25 @@
+{{! if there is a 'body' key in the data - the organism-body partial will pick it up and render it
+the value of the 'body' can be a string or a structured array of conten}}
+{{! This particular partial is the same as organisms/test-body/body-structured.mustache
+only that the partials are included so they are in the same file instead of separate ones.
+This gives a view how to accomplish what we are tryging to do}}
+BODY
+{{#body}}
+
+    {{{body}}}
+
+    {{#text}}
+
+        RENDERING CONTENT
+        {{text}}
+
+    {{/text}}
+    {{#image}}
+
+        RENDERING IMAGE - {{image}} -
+        {{image}}
+        {{#src}}
+            &lt;img src=&quot;{{img}}&quot; alt=&quot;{{alt}}&quot; /&gt;
+        {{/src}}
+    {{/image}}
+{{/body}}

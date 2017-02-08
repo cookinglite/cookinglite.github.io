@@ -1,0 +1,20 @@
+{{&lt; templates-full-width-homepage }}
+
+  {{$ header }}
+    {{&gt; organisms-alt-site-header }}
+  {{/ header }}
+
+  {{$ main }}
+    {{#page.content}}
+        {{{page.content}}}
+    {{/page.content}}
+    {{^page.content}}
+      {{&gt; templates-homepage }}
+    {{/page.content}}
+  {{/ main }}
+  
+  {{$ footer }}
+    {{&gt; organisms-site-footer }}
+  {{/ footer }}
+
+{{/ templates-full-width-homepage }}

@@ -1,0 +1,47 @@
+&lt;div class=&quot;landing-header&quot;&gt;
+  {{#is_sponsored_top?}}
+    &lt;div class=&quot;floated-right&quot;&gt;
+      {{&gt; molecules-ads-sponsor-170x30 }}
+    &lt;/div&gt;
+  {{/is_sponsored_top?}}
+
+    {{#img_headline}}
+        &lt;div style=&quot;display:block; margin-left: auto; margin-right: auto;&quot;&gt;
+            &lt;img width=&quot;400&quot; src=&quot;{{img_headline}}&quot; alt=&quot;{{title}}&quot; style=&quot;display:block; margin-left: auto; margin-right: auto;&quot;/&gt;
+        &lt;/div&gt;
+    {{/img_headline}}
+
+    {{^img_headline}}
+        &lt;h1 class=&quot;landing-header__title&quot;&gt;&lt;span class=&quot;landing-header__title-text&quot;&gt;{{title}}&lt;/span&gt;&lt;/h1&gt;
+    {{/img_headline}}
+
+
+  {{#content}}
+    &lt;div class=&quot;landing-header__content&quot;&gt;
+      {{{content}}}
+    &lt;/div&gt;
+  {{/content}}
+
+  {{#package_content}}
+  &lt;div class=&quot;package-content&quot;&gt;
+    {{#is_sponsored_bottom?}}
+      &lt;div class=&quot;package-ad&quot;&gt;
+        {{&gt; molecules-ads-sponsor-170x30 }}
+      &lt;/div&gt;
+    {{/is_sponsored_bottom?}}
+
+    {{#custom_select}}
+      &lt;div class=&quot;hide-at-md&quot;&gt;
+      {{&gt; molecules-custom-select }}
+      &lt;/div&gt;
+    {{/custom_select}}
+
+    {{#package_tag_set}}
+      &lt;div class=&quot;show-at-md&quot;&gt;
+      {{&gt; organisms-package-tag-set }}
+      &lt;/div&gt;
+    {{/package_tag_set}}
+  &lt;/div&gt;
+  {{/package_content}}
+
+&lt;/div&gt;

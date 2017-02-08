@@ -1,0 +1,25 @@
+{{#package_detail_header}}
+
+&lt;div class=&quot;page-container&quot;&gt;
+  {{&gt; molecules-breadcrumbs }}
+
+  &lt;div class=&quot;package-detail-header&quot;&gt;
+    &lt;h2 class=&quot;package-detail-header__title&quot;&gt;{{title}}&lt;/h2&gt;
+    {{#custom_select}}
+    {{&gt; molecules-custom-select }}
+    {{/custom_select}}
+
+    {{#is_sponsored?}}
+    &lt;div class=&quot;package-detail-header__sponsor&quot;&gt;
+      {{&gt; molecules-ads-sponsor-170x30 }}
+    &lt;/div&gt;
+    {{/is_sponsored?}}
+
+
+  &lt;/div&gt;
+
+  {{&gt; organisms-package-detail-description }}
+&lt;/div&gt;
+
+
+{{/package_detail_header}}

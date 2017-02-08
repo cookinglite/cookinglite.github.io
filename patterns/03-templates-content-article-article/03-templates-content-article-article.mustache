@@ -1,0 +1,15 @@
+&lt;article class=&quot;article&quot;&gt;
+    {{#content}}
+        {{{content}}}
+    {{/content}}
+
+    {{^content}}
+        {{&gt; organisms-article-header }}
+
+        {{&gt; organisms-article-body }}
+    {{/content}}
+
+    {{#outbrain_footer}}
+        {{&gt; atoms-outbrain-footer }}
+    {{/outbrain_footer}}
+&lt;/article&gt;

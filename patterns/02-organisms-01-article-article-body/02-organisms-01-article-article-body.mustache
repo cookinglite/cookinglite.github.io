@@ -1,0 +1,37 @@
+&lt;div class=&quot;article__body&quot;&gt;
+  &lt;div class=&quot;show-at-md article__social-share&quot;&gt;
+      {{#social_share}}
+          {{&gt; molecules-social-share }}
+      {{/social_share}}
+  &lt;/div&gt;
+
+  {{#body}}
+      {{! render the literal value of the body if it's not a structured array }}
+      {{! This requires a patch to the Mustache Compiler - Or it will print as 'Array'
+      see -- pattern-lab/patches/fix-printing-array-value.diff}}
+
+      {{{body}}}
+
+      {{# article_text }}
+        {{&gt; organisms-article-text }}
+      {{/ article_text }}
+
+      {{#article_media}}
+        {{&gt; organisms-article-media }}
+      {{/article_media}}
+
+      {{#blockquote}}
+        {{&gt; molecules-blockquote }}
+      {{/blockquote}}
+
+      {{#video}}
+        {{&gt; organisms-article-video }}
+      {{/video}}
+
+      {{#related_content}}
+        {{&gt; organisms-related-content }}
+      {{/related_content}}
+
+
+  {{/body}}
+&lt;/div&gt;

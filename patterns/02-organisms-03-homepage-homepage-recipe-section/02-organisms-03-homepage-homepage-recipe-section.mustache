@@ -1,0 +1,32 @@
+{{#homepage_recipe}}
+&lt;div class=&quot;recipe-section&quot;&gt;
+  {{&gt; molecules-accent-header }}
+  {{#recipe_blocks}}
+    &lt;a href=&quot;{{url}}&quot; class=&quot;recipe-block show-at-sm {{#is_final?}}show{{/is_final?}}&quot;&gt;
+      &lt;div class=&quot;recipe-block__media&quot;&gt;
+        &lt;img src=&quot;{{src}}&quot; alt=&quot;{{alt_text}}&quot;&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;recipe-block__body&quot;&gt;
+        {{#category}}
+          &lt;span class=&quot;recipe-block__category&quot;&gt;{{category}}&lt;/span&gt;
+        {{/category}}
+
+        &lt;h3 class=&quot;recipe-block__title&quot;&gt;
+          {{title}}
+        &lt;/h3&gt;
+
+        &lt;span class=&quot;recipe-block__cta link-with-arrow--fresh&quot;&gt;
+          {{#icon}}
+            &lt;svg class=&quot;recipe-block__media-icon&quot;&gt;
+              {{&gt; molecules-svg-use-tag }}
+            &lt;/svg&gt;
+          {{/icon}}
+
+          {{cta}}
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  {{/recipe_blocks}}
+&lt;/div&gt;
+{{/homepage_recipe}}

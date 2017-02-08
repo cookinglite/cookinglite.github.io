@@ -1,0 +1,32 @@
+{{#primary_menu}}
+&lt;div class=&quot;menu-group menu-group__primary&quot;
+  data-js-component=&quot;menuAccordian&quot;
+  data-accordion-panel=&quot;.menu-group__list-item&quot;
+  data-accordion-content=&quot;.menu-group__sub-menu&quot;
+  data-accordion-trigger=&quot;.menu-group__sub-menu-trigger&quot;&gt;
+  &lt;ul class=&quot;menu-group__list&quot;&gt;
+    {{#menu_items}}
+      &lt;li class=&quot;menu-group__list-item {{#sub_menu}}menu-group__list-item--with-menu{{/sub_menu}}&quot;&gt;
+
+        &lt;a href=&quot;{{url}}&quot; class=&quot;menu-group__link {{#bold?}}menu__link--heavy{{/bold?}}&quot;&gt;{{name}}&lt;/a&gt;
+
+        {{#sub_menu}}
+          &lt;span class=&quot;menu-group__sub-menu-trigger&quot;&gt;
+            &lt;svg class=&quot;menu-group__sub-menu-icon&quot;&gt;
+              &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-arrow-down&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+          &lt;/span&gt;
+
+            &lt;ul class=&quot;menu-group__sub-menu&quot;&gt;
+              {{#items}}
+                &lt;li class=&quot;menu-group__sub-menu-item&quot;&gt;&lt;a href=&quot;{{url}}&quot; class=&quot;menu-group__link menu-group__sub-menu-link&quot;&gt;{{name}}&lt;/a&gt;&lt;/li&gt;
+              {{/items}}
+            &lt;/ul&gt;
+
+        {{/sub_menu}}
+
+      &lt;/li&gt;
+    {{/menu_items}}
+  &lt;/ul&gt;
+&lt;/div&gt;
+{{/primary_menu}}

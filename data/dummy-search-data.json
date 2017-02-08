@@ -1,0 +1,49 @@
+{
+  "results": [
+    {
+      "type": "term",
+      "title": "Foo 1",
+      "url": "http://pbj.me",
+      "img": {
+        "src": "http://placehold.it/80x80",
+        "alt": "This is alt text"
+      }
+    },
+    {
+      "type": "suggested",
+      "title": "Foo 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "url": "http://google.com",
+      "img": {
+        "src": "http://placehold.it/80x80",
+        "alt": "This is alt text"
+      }
+    },
+    {
+      "type": "suggested",
+      "title": "Foo 3",
+      "url": "http://cookinglight.com",
+      "img": {
+        "src": "http://placehold.it/80x80",
+        "alt": "This is alt text"
+      }
+    },
+    {
+      "type": "suggested",
+      "title": "Foo 3",
+      "url": "http://cookinglight.com",
+      "img": {
+        "src": "http://placehold.it/80x80",
+        "alt": "This is alt text"
+      }
+    },
+    {
+      "type": "suggested",
+      "title": "Foo 3",
+      "url": "http://cookinglight.com",
+      "img": {
+        "src": "http://placehold.it/80x80",
+        "alt": "This is alt text"
+      }
+    }
+  ]
+}

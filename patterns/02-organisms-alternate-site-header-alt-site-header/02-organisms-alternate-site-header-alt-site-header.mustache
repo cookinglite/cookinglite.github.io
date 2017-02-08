@@ -1,0 +1,55 @@
+{{#alt_site_header}}
+
+  {{#leaderboard}}
+  &lt;div class=&quot;show-at-md&quot;&gt;
+    {{&gt; molecules-ads-leaderboard-flex }}
+  &lt;/div&gt;
+  {{/leaderboard}}
+
+  &lt;header class=&quot;site-header site-header--alt {{#glance_bar}}has-glance-bar{{/glance_bar}}&quot; data-js-component=&quot;smallScreenStickyNav&quot;&gt;
+
+    {{#leaderboard}}
+    &lt;div class=&quot;hide-at-md&quot;&gt;
+      {{&gt; molecules-ads-leaderboard-flex }}
+    &lt;/div&gt;
+    {{/leaderboard}}
+
+    &lt;div class=&quot;site-header__bar site-header__menu-bar&quot;&gt;
+      &lt;div class=&quot;site-header__wrap {{#wide_layout}}site-header__wrap--wide{{/wide_layout}}&quot;&gt;
+        &lt;div class=&quot;menu-bar&quot;&gt;
+          {{&gt; molecules-menu-bar-menu-icon }}
+
+          {{&gt; molecules-site-logo }}
+
+          &lt;div class=&quot;hide-at-md&quot;&gt;
+            {{&gt; molecules-menu-bar-search }}
+          &lt;/div&gt;
+
+          &lt;div class=&quot;show-at-md&quot;&gt;
+            {{&gt; molecules-floating-search-bar }}
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;hide-at-md&quot;&gt;
+        {{&gt; organisms-search-bar }}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;div class=&quot;site-header__group&quot;&gt;
+    {{&gt; organisms-glance-bar }}
+
+      {{#exposed_search_bar}}
+        &lt;div class=&quot;hide-at-md&quot;&gt;
+          {{&gt; organisms-search-bar }}
+        &lt;/div&gt;
+      {{/exposed_search_bar}}
+
+  &lt;/div&gt;
+{{/alt_site_header}}
+
+{{&gt; organisms-scrolling-desktop-nav }}
+
+{{&gt; organisms-site-menu }}

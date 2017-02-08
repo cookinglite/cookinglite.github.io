@@ -1,0 +1,30 @@
+&lt;nav class=&quot;site-nav show-at-md&quot;&gt;
+  &lt;ul class=&quot;site-nav__list&quot;&gt;
+    {{#items}}
+      &lt;li class=&quot;site-nav__item&quot;&gt;
+        &lt;a href=&quot;{{url}}&quot; class=&quot;site-nav__link {{#bold?}}site-nav__link--heavy{{/bold?}}&quot;&gt;{{text}}&lt;/a&gt;
+
+          {{#sub_menu}}
+            &lt;div class=&quot;site-nav__sub-nav&quot;&gt;
+              &lt;ul class=&quot;site-nav__sub-nav-list&quot;&gt;
+                {{#items}}
+                  &lt;li class=&quot;site-nav__item&quot;&gt;
+                    &lt;a href=&quot;{{url}}&quot; class=&quot;site-nav__link&quot;&gt;{{text}}&lt;/a&gt;
+
+                  &lt;/li&gt;
+                {{/items}}
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          {{/sub_menu}}
+
+          {{#subscribe?}}
+            {{&gt; organisms-site-nav-subscribe }}
+          {{/subscribe?}}
+
+          {{#diet?}}
+            {{&gt; molecules-ads-cm-nav-menu-4x1-diet}}
+          {{/diet?}}
+      &lt;/li&gt;
+    {{/items}}
+  &lt;/ul&gt;
+&lt;/nav&gt;

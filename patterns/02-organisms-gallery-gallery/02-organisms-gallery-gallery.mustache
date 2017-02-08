@@ -1,0 +1,70 @@
+
+  &lt;div class=&quot;gallery&quot; data-js-component=&quot;gallery&quot; data-config=&quot;galleryConfig&quot; data-bind=&quot;swipeLeft: gotoNextSlide, swipeRight: gotoPrevSlide, leftArrowPress: gotoPrevSlide,rightArrowPress: gotoNextSlide&quot;&gt;
+  
+    &lt;div class=&quot;gallery__slide&quot; data-bind=&quot;css: slideMediaType&quot;&gt;
+        {{#gallery_controls}}
+            {{&gt; organisms-gallery-controls }}
+        {{/gallery_controls}}
+        &lt;div class=&quot;gallery__media&quot; data-bind=&quot;template: { if: currentSlide, name: templateType, data: currentSlide()}, css: slideMediaType&quot;&gt;
+          {{#slide}}
+  
+            {{#image}}
+              {{&gt; organisms-gallery-image }}
+            {{/image}}
+  
+            {{#video}}
+              {{&gt; organisms-gallery-video }}
+            {{/video}}
+  
+            {{#ad}}
+              {{&gt; organisms-gallery-ad }}
+            {{/ad}}
+  
+          {{/slide}}
+        &lt;/div&gt;
+  
+        &lt;!-- ko if: isGalleryContentSlide --&gt;
+        {{#social-share}}
+          {{&gt; molecules-social-share }}
+        {{/social-share}}
+        &lt;!-- /ko --&gt;
+      &lt;/div&gt;
+
+      {{#gallery_meta}}
+          {{&gt; organisms-gallery-meta }}
+      {{/gallery_meta}}
+
+      &lt;!-- ko if: isGalleryActive --&gt;
+      {{#gallery_caption}}
+        {{&gt; organisms-gallery-caption }}
+      {{/gallery_caption}}
+      &lt;!-- /ko --&gt;
+  
+      &lt;!-- ko if: isTitleCardVisible() --&gt;
+      {{#gallery_description}}
+        {{&gt; organisms-gallery-description }}
+      {{/gallery_description}}
+      &lt;!-- /ko --&gt;
+  &lt;/div&gt;
+
+  &lt;script type=&quot;text/html&quot; id=&quot;image-slide-template&quot;&gt;
+    {{&gt; organisms-gallery-image }}
+  &lt;/script&gt;
+
+  &lt;script type=&quot;text/html&quot; id=&quot;video-slide-template&quot;&gt;
+    {{&gt; organisms-gallery-video }}
+  &lt;/script&gt;
+
+  &lt;script type=&quot;text/html&quot; id=&quot;ad-slide-template&quot;&gt;
+    {{&gt; organisms-gallery-ad }}
+  &lt;/script&gt;
+
+  &lt;script type=&quot;text/html&quot; id=&quot;outro-slide-template&quot;&gt;
+    {{&gt; organisms-gallery-endslate }}
+  &lt;/script&gt;
+
+  {{#gallery_json}}
+  &lt;script&gt;
+      {{&gt; organisms-gallery-json }}
+  &lt;/script&gt;
+  {{/gallery_json}}

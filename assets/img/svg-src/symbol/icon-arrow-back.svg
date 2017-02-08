@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Recipe_print" transform="translate(-46.000000, -15.000000)" fill="#171A1A">
+            <polygon id="Arrow" transform="translate(51.000000, 18.803394) scale(-1, 1) translate(-51.000000, -18.803394) " points="52.8282162 15 52.6892921 15.165828 52.2947222 15.6344062 52.153895 15.8017555 52.2940878 15.9691049 54.1838366 18.2344066 46 18.2344066 46 19.3716216 54.1838366 19.3716216 52.2940878 21.6369233 52.153895 21.8050333 52.2947222 21.9723827 52.6892921 22.4409609 52.8282162 22.6067889 52.9671403 22.4402002 55.8610759 18.9707438 56 18.8026338 55.8610759 18.6360451 52.9671403 15.1665887"></polygon>
+        </g>
+    </g>
+</svg>

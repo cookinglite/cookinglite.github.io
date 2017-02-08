@@ -1,0 +1,32 @@
+{{#featured_story}}
+  &lt;div class=&quot;featured-story&quot;&gt;
+    &lt;div class=&quot;media media-wrap featured-story__media-wrap&quot;&gt;
+        {{#media}}
+          &lt;img class=&quot;featured-story__img&quot; src=&quot;{{src}}&quot; alt=&quot;{{alt}}&quot;&gt;
+        {{/media}}
+
+        {{#social_share}}
+        &lt;div class=&quot;hide-at-sm&quot;&gt;
+          {{&gt; molecules-social-share }}
+        &lt;/div&gt;
+        {{/social_share}}
+    &lt;/div&gt;
+    &lt;div class=&quot;featured-story__body&quot;&gt;
+      &lt;div class=&quot;featured-story__content&quot;&gt;
+        {{#category}}
+          &lt;span class=&quot;featured-story__category&quot;&gt;{{category}}&lt;/span&gt;
+        {{/category}}
+
+        &lt;h2 class=&quot;featured-story__title&quot;&gt;{{title}}&lt;/h2&gt;
+
+        {{#description}}
+          &lt;div class=&quot;featured-story__description&quot;&gt;{{{description}}}&lt;/div&gt;
+        {{/description}}
+
+        {{#url}}
+          &lt;a href=&quot;{{url}}&quot; class=&quot;btn btn-accent btn--centered link-with-arrow&quot;&gt;{{cta}}&lt;/a&gt;
+        {{/url}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+{{/featured_story}}

@@ -1,0 +1,26 @@
+&lt;div class=&quot;article__media article__media--hero&quot;&gt;
+&lt;figure class=&quot;media &quot;&gt;
+  &lt;div class=&quot;media-wrap&quot;&gt;
+    &lt;img class=&quot;media__img&quot; src=&quot;{{src}}&quot; alt=&quot;{{alt}}&quot; itemprop=&quot;image&quot;&gt;
+
+    {{#recipe_video?}}
+      &lt;span id=&quot;{{video_id}}&quot; class=&quot;icon-video-overplay&quot;&gt;&lt;/span&gt;
+    {{/recipe_video?}}
+
+    {{#social_share}}
+      {{&gt;molecules-social-share}}
+    {{/social_share}}
+  &lt;/div&gt;
+
+  &lt;figcaption&gt;
+    {{#credit}}
+      &lt;span class=&quot;media__text media__credit&quot;&gt;{{{credit}}}&lt;/span&gt;
+    {{/credit}}
+
+    {{#caption}}
+      &lt;div class=&quot;media__text media__caption&quot;&gt;{{caption}}&lt;/div&gt;
+    {{/caption}}
+  &lt;/figcaption&gt;
+
+&lt;/figure&gt;
+&lt;/div&gt;

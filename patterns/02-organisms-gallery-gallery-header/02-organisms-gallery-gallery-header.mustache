@@ -1,0 +1,31 @@
+&lt;header class=&quot;gallery__header article__header {{#list_view}}gallery__header--list-view{{/list_view}} {{^list_view}}gallery__header--gallery-view{{/list_view}}&quot;&gt;
+  {{#breadcrumbs}}
+    {{&gt; molecules-breadcrumbs }}
+  {{/breadcrumbs}}
+
+  {{#headline}}
+    {{&gt; organisms-article-title }}
+  {{/headline}}
+
+  {{#toggle}}
+  {{&gt; organisms-gallery-view-toggle }}
+  {{/toggle}}
+
+  {{#main_image}}
+      {{&gt; organisms-article-media }}
+  {{/main_image}}
+
+  {{#author}}
+    {{# article_meta}}
+      {{&gt; organisms-article-meta }}
+    {{/ article_meta}}
+  {{/author}}
+
+  {{#deck}}
+      {{&gt; organisms-article-leader }}
+  {{/deck}}
+
+  {{#description}}
+  {{&gt; organisms-gallery-description }}
+  {{/description}}
+&lt;/header&gt;

@@ -1,0 +1,16 @@
+&lt;div class=&quot;related-videos&quot;&gt;
+  &lt;h3 class=&quot;related-videos__title&quot;&gt;{{title}}&lt;/h3&gt;
+
+  {{#items}}
+  &lt;div class=&quot;related-videos__item&quot;&gt;
+    &lt;a href=&quot;{{url}}&quot; class=&quot;media-object&quot;&gt;
+      &lt;div class=&quot;related-videos__media-wrap media-object__media-wrap&quot;&gt;
+        &lt;img class=&quot;media-object__media&quot; src=&quot;{{media_src}}&quot; alt=&quot;{{media_alt}}&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;related-videos__item-body media-object__body&quot;&gt;
+        {{{text}}}
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  {{/items}}
+&lt;/div&gt;

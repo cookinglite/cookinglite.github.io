@@ -1,0 +1,12 @@
+&lt;div class=&quot;recipe-instructions&quot; &gt;
+    &lt;ol class=&quot;recipe-instructions__list custom-list custom-list--lg custom-list--branded custom-list--serif&quot; itemprop=&quot;recipeInstructions&quot;&gt;
+      {{#items}}
+        &lt;li class=&quot;recipe-instructions__list-item custom-list__item&quot;&gt;
+          &lt;div class=&quot;recipe-instructions__content&quot;&gt;
+            {{{text}}}
+                {{&gt; organisms-article-media }}
+          &lt;/div&gt;
+        &lt;/li&gt;
+      {{/items}}
+    &lt;/ol&gt;
+&lt;/div&gt;

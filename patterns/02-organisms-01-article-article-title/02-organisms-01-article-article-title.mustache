@@ -1,0 +1,16 @@
+&lt;div class=&quot;article__header-wrap {{#sponsored?}}has-sponsor{{/sponsored?}} {{#sponsored_recipe?}}has-sponsor{{/sponsored_recipe?}}&quot;&gt;
+
+    {{#sponsored?}}
+      &lt;div class=&quot;ad-wrapper&quot;&gt;
+        {{&gt;molecules-ads-sponsor-170x30}}
+      &lt;/div&gt;
+
+    {{/sponsored?}}
+
+    {{#sponsored_recipe}}
+        {{&gt; organisms-recipe-sponsor }}
+    {{/sponsored_recipe}}
+
+    &lt;h1 class=&quot;article-title&quot; itemprop=&quot;name&quot;&gt;{{{title}}}&lt;/h1&gt;
+
+&lt;/div&gt;

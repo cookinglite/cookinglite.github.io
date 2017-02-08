@@ -1,0 +1,48 @@
+&lt;div class=&quot;story-card {{#horizontal?}}story-card--horizontal{{/horizontal?}} {{#featured?}}story-card--featured{{/featured?}} {{#social_share}}has-social-share{{/social_share}}  {{#collage?}}story-card--collage{{/collage?}}&quot;&gt;
+  &lt;div class=&quot;story-card__media&quot;&gt;
+    {{#src}}
+    &lt;a href=&quot;{{url}}&quot; class=&quot;story-card__link&quot;&gt;
+        &lt;div class=&quot;media-wrap&quot;&gt;
+          &lt;img src=&quot;{{src}}&quot; alt=&quot;{{alt}}&quot;&gt;
+        &lt;/div&gt;
+      {{#badge}}
+        &lt;svg class=&quot;icon icon-badge story-card__badge&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-{{ icon }}&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+      {{/badge}}
+    &lt;/a&gt;
+    {{/src}}
+
+    {{#video}}
+      {{&gt; molecules-jumpstart-video }}
+    {{/video}}
+
+    {{#social_share}}
+      &lt;div class=&quot;story-card__share&quot;&gt;
+        {{&gt; molecules-social-share }}
+      &lt;/div&gt;
+    {{/social_share}}
+  &lt;/div&gt;
+
+  &lt;div class=&quot;story-card__body&quot;&gt;
+    {{#category}}
+      &lt;span class=&quot;story-card__category&quot;&gt;{{category}}&lt;/span&gt;
+    {{/category}}
+
+    &lt;a href=&quot;{{url}}&quot; class=&quot;story-card__title&quot;&gt;{{{title}}}&lt;/a&gt;
+
+    {{#featured?}}
+      &lt;div class=&quot;story-card__content&quot;&gt;
+          {{{content}}}
+      &lt;/div&gt;
+    {{/featured?}}
+
+    {{#cta}}
+      &lt;a class=&quot;link-with-arrow link-with-arrow--accent&quot; href=&quot;{{url}}&quot;&gt;{{cta}}&lt;/a&gt;
+    {{/cta}}
+
+    {{#sponsor}}
+      {{&gt; molecules-ads-sponsor-170x30}}
+    {{/sponsor}}
+  &lt;/div&gt;
+&lt;/div&gt;

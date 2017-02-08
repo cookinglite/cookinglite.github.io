@@ -1,0 +1,126 @@
+&lt;div class=&quot;gallery__body article__body&quot;&gt;
+
+
+    
+
+    
+
+        
+          &lt;div class=&quot;gallery&quot; data-js-component=&quot;gallery&quot; data-config=&quot;galleryConfig&quot; data-bind=&quot;swipeLeft: gotoNextSlide, swipeRight: gotoPrevSlide, leftArrowPress: gotoPrevSlide,rightArrowPress: gotoNextSlide&quot;&gt;
+          
+            &lt;div class=&quot;gallery__slide&quot; data-bind=&quot;css: slideMediaType&quot;&gt;
+                    &lt;div class=&quot;gallery-controls&quot;&gt;
+                      &lt;a href=&quot;http://previous.com&quot; class=&quot;gallery-controls__btn gallery-controls__btn--prev&quot;
+                          data-bind=&quot;click: gotoPrevSlide,
+                                      clickBubble: false,
+                                      visible: !isTitleCardVisible(),
+                                      css: {'is-disabled' : pauseGallery()}&quot;&gt;
+                        &lt;svg class=&quot;gallery-controls__btn-icon gallery-controls__btn-icon--prev&quot;&gt;
+                          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;/assets/img/symbols.svg#icon-gallery-arrow-prev&quot;&gt;&lt;/use&gt;
+                        &lt;/svg&gt;
+                      &lt;/a&gt;
+                      &lt;a href=&quot;http://previous.com&quot; class=&quot;gallery-controls__btn gallery-controls__btn--next&quot;
+                          data-bind=&quot;click: gotoNextSlide,
+                                      clickBubble: false,
+                                      css: {
+                                        'is-disabled' : pauseGallery(),
+                                        'gallery-controls__btn--start': isTitleCardVisible()
+                                      }&quot;&gt;
+                        &lt;span class=&quot;gallery-controls__btn-start-text&quot; data-bind=&quot;visible: isTitleCardVisible()&quot;&gt;Start&lt;/span&gt;
+                        &lt;svg class=&quot;gallery-controls__btn-icon gallery-controls__btn-icon--next&quot;&gt;
+                          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;/assets/img/symbols.svg#icon-gallery-arrow-next&quot;&gt;&lt;/use&gt;
+                        &lt;/svg&gt;
+                      &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;div class=&quot;gallery__media&quot; data-bind=&quot;template: { if: currentSlide, name: templateType, data: currentSlide()}, css: slideMediaType&quot;&gt;
+          
+                      &lt;img class=&quot;gallery__image&quot; src=&quot;http://placehold.it/300x300&quot; alt=&quot;This is some alt text&quot; data-pin-no-hover=&quot;true&quot; data-bind=&quot;attr: {src: image, alt: altText}&quot; /&gt;          
+          
+          
+                &lt;/div&gt;
+          
+                &lt;!-- ko if: isGalleryContentSlide --&gt;
+                &lt;!-- /ko --&gt;
+              &lt;/div&gt;
+        
+                  &lt;div class=&quot;gallery-meta&quot;&gt;
+                    &lt;div class=&quot;gallery-counter&quot; data-bind=&quot;if: isGalleryActive &amp;&amp; isGalleryContentSlide&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;media__credit&quot; data-bind=&quot;text: currentSlide().imageCredit&quot;&gt;Dan Colonna&lt;/div&gt;
+                  &lt;/div&gt;
+        
+              &lt;!-- ko if: isGalleryActive --&gt;
+                &lt;!-- ko if: isNotOutroSlide --&gt;
+                &lt;div class=&quot;gallery-caption&quot; data-bind=&quot;with: currentSlide&quot;&gt;
+                  &lt;div class=&quot;gallery-caption__header&quot;&gt;
+                    &lt;h2 class=&quot;gallery__slide-title&quot; data-bind=&quot;html: title&quot;&gt;This is a slide title!&lt;/h2&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;gallery-caption__body&quot; data-bind=&quot;html: caption&quot;&gt;
+                    Here is some caption content, yay!
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- /ko --&gt;
+              &lt;!-- /ko --&gt;
+          
+              &lt;!-- ko if: isTitleCardVisible() --&gt;
+                &lt;div class=&quot;gallery-description&quot;&gt;
+                
+                  &lt;div class=&quot;article__meta &quot;&gt;
+                      &lt;div class=&quot;article__meta-byline&quot;&gt;
+                        
+                          &lt;a class=&quot;byline&quot; href=&quot;http://example.com&quot; &gt;
+                            &lt;img class=&quot;byline__media&quot; src=&quot;http://placehold.it/45x45&quot; alt=&quot;&quot;&gt;
+                            &lt;div class=&quot;byline__text&quot; &gt;
+                              By
+                              &lt;span class=&quot;byline__author&quot;&gt;Eva Gonzalez&lt;/span&gt;
+                                &lt;span class=&quot;byline__date&quot;&gt;June, 6, 2016&lt;/span&gt;
+                            &lt;/div&gt;
+                          &lt;/a&gt;
+                        
+                      &lt;/div&gt;
+                      &lt;div class=&quot;article__meta-share show-at-md&quot;&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+                
+                  &lt;div class=&quot;article__lead&quot;&gt;
+                      Sweet and juicy tomatoes are the star here. We have a recipe collection that features this summer's showstopper.
+                  &lt;/div&gt;
+                
+                  &lt;div class=&quot;gallery-description__content&quot;&gt;
+                    &lt;p&gt;There's so much to love about these seasonal beauties. When summer is here, put down the cans and head to the farmer's market for fresh tomato flavor that can't be beat. From rustic sauces to salsas, we can't stop dreaming up new ways to enjoy fresh tomatoes.&lt;/p&gt;
+                
+                    &lt;a href=&quot;#&quot; class=&quot;btn link-with-arrow btn--start&quot; data-bind=&quot;click: gotoNextSlide, clickBubble: false&quot;&gt;Start Slideshow&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;!-- /ko --&gt;
+          &lt;/div&gt;
+        
+          &lt;script type=&quot;text/html&quot; id=&quot;image-slide-template&quot;&gt;
+            &lt;img class=&quot;gallery__image&quot; src=&quot;&quot; alt=&quot;&quot; data-pin-no-hover=&quot;true&quot; data-bind=&quot;attr: {src: image, alt: altText}&quot; /&gt;          &lt;/script&gt;
+        
+          &lt;script type=&quot;text/html&quot; id=&quot;video-slide-template&quot;&gt;
+            &lt;div class=&quot;gallery__video&quot;&gt;
+              &lt;div style=&quot;display:none&quot;&gt;&lt;/div&gt;
+              
+              &lt;object type=&quot;application/x-shockwave-flash&quot; data=&quot;http://c.brightcove.com/services/viewer/federated_f9?&amp;amp;width=640&amp;amp;height=360&amp;amp;flashID=myExperience-1&amp;amp;wmode=opaque&amp;amp;bgcolor=%23FFFFFF&amp;amp;playerID=2444926739001&amp;amp;playerKey=AQ~~%2CAAAAABxHNRc~%2C2PQy55JIF_GMqcUDrm_IeQ8yTdYMQ0Fj&amp;amp;includeAPI=true&amp;amp;templateLoadHandler=bcTemplateLoaded&amp;amp;templateReadyHandler=brightcove%5B%22templateReadyHandlermyExperience-1%22%5D&amp;amp;isVid=true&amp;amp;%40videoPlayer=4493023517001&amp;amp;isUI=true&amp;amp;dynamicStreaming=true&amp;amp;linkBaseURL=h&amp;amp;autoStart=&amp;amp;debuggerID=&amp;amp;originalTemplateReadyHandler=onTemplateReady&amp;amp;startTime=1445291546823&quot; id=&quot;myExperience-1&quot; width=&quot;640&quot; height=&quot;360&quot; class=&quot;BrightcoveExperience brightcove-field-embed&quot; seamlesstabbing=&quot;undefined&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;seamlessTabbing&quot; value=&quot;false&quot;&gt;&lt;param name=&quot;swliveconnect&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;opaque&quot;&gt;&lt;param name=&quot;quality&quot; value=&quot;high&quot;&gt;&lt;param name=&quot;bgcolor&quot; value=&quot;#FFFFFF&quot;&gt;&lt;/object&gt;
+            &lt;/div&gt;          &lt;/script&gt;
+        
+          &lt;script type=&quot;text/html&quot; id=&quot;ad-slide-template&quot;&gt;
+            &lt;div class=&quot;gallery__ad&quot;&gt;
+              &lt;div id=&quot;gallery__ad-container&quot; data-bind=&quot;adContainer&quot;&gt;
+                &lt;div  class=&quot;ad-placeholder ad-refresh&quot; id=&quot;ad-gallery_interstitial_ad&quot; data-id=&quot;gallery_interstitial_ad&quot; data-type=&quot;regular&quot;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;span class=&quot;skip-ad&quot; data-bind=&quot;visible: $parent.adTimer.isActive()&quot;&gt;Skip ad in &lt;span class=&quot;skip-ad-count&quot; data-bind=&quot;text: $parent.adTimer.secondsElapsed&quot;&gt;&lt;/span&gt; seconds&lt;/span&gt;
+              &lt;a class=&quot;skip-ad skip-ad-link&quot; href=&quot;&lt;?php print $next_slide_url; ?&gt;&quot;
+                data-bind=&quot;visible: !$parent.adTimer.isActive(),
+                            click: $parent.skipAdSlide&quot;&gt;Skip Ad&lt;/a&gt;
+            &lt;/div&gt;          &lt;/script&gt;
+        
+          &lt;script type=&quot;text/html&quot; id=&quot;outro-slide-template&quot;&gt;
+          &lt;/script&gt;
+        
+
+
+
+
+&lt;/div&gt;

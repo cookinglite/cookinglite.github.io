@@ -1,0 +1,24 @@
+{{#simple_subscribe}}
+&lt;div class=&quot;simple-subscribe&quot;&gt;
+  &lt;div class=&quot;simple-subscribe__content&quot;&gt;
+    &lt;h3 class=&quot;simple-subscribe__title&quot;&gt;{{title}}&lt;/h3&gt;
+
+    {{#tagline}}
+      &lt;p class=&quot;simple-subscribe__tagline&quot;&gt;{{tagline}}&lt;/p&gt;
+    {{/tagline}}
+
+    {{#form}}
+    &lt;form action=&quot;{{action}}&quot; class=&quot;simple-subscribe__form&quot;&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control form-control--full  form-control--rounded&quot; placeholder=&quot;{{input1_placeholder}}&quot; name=&quot;email_address&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control form-control--major form-control--mgr form-control--rounded&quot; placeholder=&quot;{{input2_placeholder}}&quot; name=&quot;zip_code&quot;&gt;
+        &lt;button class=&quot;btn form-btn form-control--minor&quot; id=&quot;btn_newsletter&quot;&gt;{{btn}}&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    {{/form}}
+    &lt;a href=&quot;{{privacy_policy_link}}&quot; class=&quot;privacy-link text-xs text-dark text-upper&quot;&gt;{{privacy_policy_text}}&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+{{/simple_subscribe}}

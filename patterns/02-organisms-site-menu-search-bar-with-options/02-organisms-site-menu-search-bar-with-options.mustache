@@ -1,0 +1,33 @@
+{{#search_bar_with_options}}
+&lt;div class=&quot;search-bar search-bar--with-options {{#in_site_header?}}search-bar--in-site-header{{/in_site_header?}} {{#in_side_nav?}}search-bar--in-side-nav{{/in_side_nav?}}&quot;
+            {{#display_icon_on_scroll}}
+              data-js-component=&quot;searchDisplay&quot;
+            {{/display_icon_on_scroll}}&gt;
+  &lt;div class=&quot;search-bar__wrap&quot;
+    &gt;
+    &lt;form class=&quot;form-inline search-form&quot; action=&quot;{{ form_action }}&quot;&gt;
+      
+      {{&gt; organisms-search-input-field }}
+      
+      &lt;div class=&quot;autocomplete-container&quot;&gt;&lt;/div&gt;
+
+      &lt;button class=&quot;btn form-btn link-with-arrow search-bar__btn&quot;&gt;
+        Search
+      &lt;/button&gt;
+    &lt;/form&gt;
+
+    {{^results}}
+      {{#search_terms}}
+      {{&gt; organisms-search-terms }}
+      {{/search_terms}}
+    {{/results}}
+
+    {{#results}}
+      {{#term_filters}}
+      {{&gt; organisms-term-filters }}
+      {{/term_filters}}
+    {{/results}}
+
+  &lt;/div&gt;
+&lt;/div&gt;
+{{/search_bar_with_options}}

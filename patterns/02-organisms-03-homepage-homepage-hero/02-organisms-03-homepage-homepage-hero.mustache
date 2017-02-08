@@ -1,0 +1,16 @@
+{{#homepage_hero}}
+&lt;div class=&quot;homepage-hero&quot;&gt;
+  {{#media_src}}
+    &lt;img class=&quot;homepage-hero__media&quot; src=&quot;{{media_src}}&quot; alt=&quot;{{media_alt}}&quot;&gt;
+  {{/media_src}}
+
+  {{#story}}
+  &lt;div class=&quot;homepage-hero__featured-story&quot;&gt;
+    &lt;a href=&quot;{{url}}&quot; class=&quot;homepage-hero__featured-story-link link-with-arrow--accent-lg&quot;&gt;{{title}}&lt;/a&gt;
+  &lt;/div&gt;
+  {{/story}}
+
+  {{&gt; organisms-homepage-hero-subscribe }}
+
+&lt;/div&gt;
+{{/homepage_hero}}

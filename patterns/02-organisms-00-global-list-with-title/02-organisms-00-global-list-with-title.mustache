@@ -1,0 +1,11 @@
+{{#list_with_title}}
+&lt;div class=&quot;titled-list&quot;&gt;
+  {{#title}}
+    &lt;h2 class=&quot;list__title {{#is_accent?}}list__title--accent{{/is_accent?}}&quot;&gt;List with title&lt;/h2&gt;
+  {{/title}}
+
+  {{#list_with_links}}
+   {{&gt; molecules-list-with-links }}
+  {{/list_with_links}}
+&lt;/div&gt;
+{{/list_with_title}}

@@ -1,0 +1,28 @@
+&lt;div class=&quot;featured-list&quot;&gt;
+  &lt;div class=&quot;featured-list__section featured-list__section--sm&quot;&gt;
+    {{#story}}
+      {{#media}}
+        &lt;div class=&quot;media-wrap featured-list__story-media&quot;&gt;
+          &lt;img src=&quot;{{src}}&quot; alt=&quot;{{alt}}&quot;&gt;
+        &lt;/div&gt;
+      {{/media}}
+    {{/story}}
+  &lt;/div&gt;
+  &lt;div class=&quot;featured-list__section featured-list__section--lg&quot;&gt;
+    {{#story}}
+    &lt;a href=&quot;{{url}}&quot; class=&quot;featured-list__story-title&quot;&gt;{{title}}&lt;/a&gt;
+    &lt;div class=&quot;featured-list__story-content&quot;&gt;
+      {{{content}}}
+      &lt;a class=&quot;link-with-arrow link-with-arrow--accent&quot; href=&quot;{{url}}&quot;&gt;{{cta}}&lt;/a&gt;
+    &lt;/div&gt;
+    {{/story}}
+    {{#list_group}}
+      &lt;div class=&quot;featured-list__group&quot;&gt;
+        &lt;h3 class=&quot;featured-list__title&quot;&gt;{{title}}&lt;/h3&gt;
+        {{#list_with_links}}
+          {{&gt; molecules-list-with-links }}
+        {{/list_with_links}}
+      &lt;/div&gt;
+    {{/list_group}}
+  &lt;/div&gt;
+&lt;/div&gt;

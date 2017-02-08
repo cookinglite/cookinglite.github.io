@@ -1,0 +1,35 @@
+{{&lt; templates-full-width-layout }}
+
+{{$ top }}
+{{&gt; organisms-site-header }}
+{{/ top }}
+
+{{$ main }}
+{{#content}}
+    {{&gt; organisms-well-done }}
+    {{#content_items}}
+        {{#story_card}}
+            {{&gt; organisms-story-card}}
+        {{/story_card}}
+
+        {{#story_card_two_up}}
+            {{&gt; organisms-story-card-two-up}}
+        {{/story_card_two_up}}
+
+        {{#featured_list}}
+            {{&gt; organisms-featured-list }}
+        {{/featured_list}}
+
+    {{/content_items}}
+{{/content}}
+{{/ main}}
+
+{{$ bottom}}
+{{&gt; organisms-full-width-subscribe-ad }}
+{{/ bottom}}
+
+{{$ site_footer }}
+{{&gt; organisms-site-footer }}
+{{/ site_footer }}
+
+{{/ templates-full-width-layout }}

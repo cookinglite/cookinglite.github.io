@@ -1,0 +1,44 @@
+&lt;div class=&quot;recipe__body-main&quot;&gt;
+
+    {{{main}}}
+
+    {{#content_main}}
+
+        {{#article_text}}
+            {{&gt; organisms-article-text }}
+        {{/article_text}}
+
+        {{#article-media}}
+            {{&gt; organisms-article-media }}
+        {{/article-media}}
+
+        {{#blockquote}}
+            {{&gt; molecules-blockquote }}
+        {{/blockquote}}
+
+        {{#article-video}}
+            {{&gt; organisms-article-video }}
+        {{/article-video}}
+
+        {{#recipe_instruction_list}}
+            {{&gt; organisms-recipe-instruction-list }}
+        {{/recipe_instruction_list}}
+
+        {{#recipe_nutrition_text}}
+          {{&gt; organisms-recipe-nutrition-text }}
+        {{/recipe_nutrition_text}}
+
+        {{&gt; organisms-article-copyright }}
+
+        {{#article_copyright}}
+            {{&gt; organisms-article-copyright }}
+        {{/article_copyright}}
+
+        {{#recipe_previous_magazine}}
+            {{&gt; organisms-recipe-previous-magazine }}
+        {{/recipe_previous_magazine}}
+
+    {{/content_main}}
+
+    {{&gt; organisms-recipe-outbrain }}
+&lt;/div&gt;

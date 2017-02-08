@@ -1,0 +1,35 @@
+&lt;script&gt;
+
+
+    var tgx_ad_callback_ad_leaderboard_responsive = function (event, sizes, breakpoint, oldBreakpoint) {
+        if (event === 'render' &amp;&amp; this.id == 'ad-300x250_300x600_ATF') {
+
+        }
+        else if (event === 'remove') {
+
+        }
+        else if (event === 'rendered') {
+
+        }
+    };
+
+    tgx_ad_slots.push(function(ads){
+
+        ads.addSlot({
+            id: 'ad-300x250_300x600_ATF',
+            responsive: {
+
+                sm: {sizes: ['300x250']},
+                md: {sizes: ['300x1050', '300x600', '300x250'], callback: tgx_ad_callback_ad_leaderboard_responsive },
+                lg: {sizes: ['300x1050', '300x600', '300x250'], callback: tgx_ad_callback_ad_leaderboard_responsive },
+                xl: {sizes: ['300x1050', '300x600', '300x250'], callback: tgx_ad_callback_ad_leaderboard_responsive }
+            },
+            defer: 0,
+            position: 1,
+            {{#trackview}}trackview: {{trackview}},{{/trackview}}{{^trackview}}trackview: true,{{/trackview}}
+            updateCorrelator: false
+        });
+
+    });
+
+&lt;/script&gt;

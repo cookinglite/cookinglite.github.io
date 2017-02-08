@@ -1,0 +1,36 @@
+{{#full-width-subscribe}}
+  {{text}}
+  &lt;div class=&quot;footer-subscribe&quot;&gt;
+    {{#subscribe}}
+    &lt;div class=&quot;footer-subscribe__section&quot;&gt;
+      {{&gt; molecules-ads-cm-footer-global }}
+    &lt;/div&gt;
+    {{/subscribe}}
+
+    {{#newsletter}}
+    &lt;div class=&quot;footer-subscribe__section footer-subscribe__section--dark&quot;&gt;
+      &lt;div class=&quot;newsletter&quot;&gt;
+
+        &lt;div class=&quot;newsletter__content&quot;&gt;
+          &lt;h3 class=&quot;newsletter__cta&quot;&gt;{{cta}}&lt;/h3&gt;
+          &lt;p class=&quot;newsletter__tagline&quot;&gt;{{tagline}}&lt;/p&gt;
+          {{#form}}
+          &lt;form action=&quot;{{action}}&quot; class=&quot;form-inline newsletter__form&quot; method=&quot;get&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;input type=&quot;text&quot; id=&quot;email_address&quot; class=&quot;form-control form-control--rounded&quot; placeholder=&quot;{{input1_placeholder}}&quot; name=&quot;email_address&quot;&gt;
+              &lt;input type=&quot;text&quot; id=&quot;zip&quot; class=&quot;form-control form-control--rounded&quot; placeholder=&quot;{{input2_placeholder}}&quot; name=&quot;zip&quot;&gt;
+              &lt;input type=&quot;hidden&quot; name=&quot;Source&quot; value =&quot;{{source}}&quot;&gt;
+              &lt;input type=&quot;hidden&quot; name=&quot;Newsletter_Name&quot; value =&quot;{{newslettername}}&quot;&gt;
+            &lt;/div&gt;
+            &lt;button class=&quot;btn link-with-arrow&quot; id=&quot;btn_newsletter&quot;&gt;{{btn}}&lt;/button&gt;
+          &lt;/form&gt;
+          {{/form}}
+          &lt;a href=&quot;{{privacy_policy_link}}&quot; class=&quot;text-sm text-lite text-upper&quot;&gt;{{privacy_policy_text}}&lt;/a&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+    {{/newsletter}}
+  &lt;/div&gt;
+
+{{/full-width-subscribe}}

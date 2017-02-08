@@ -1,0 +1,20 @@
+&lt;script&gt;
+    tgx_ad_slots.push(function(ads){
+        ads.addSlot({
+            id: 'ad-footer-menu',
+            responsive: {
+                sm: ['80x25'],
+                md: ['126x40'],
+                lg: ['126x40'],
+                xl: ['126x40']
+            },
+            params: {
+                {{#test}}test: {{test}},{{/test}}
+                cmpos: &quot;globalftrsublnk&quot;,
+                cmtyp: &quot;text&quot;
+            },
+            cm: true,
+            priority: 3
+        });
+    });
+&lt;/script&gt;

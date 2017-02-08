@@ -1,0 +1,23 @@
+&lt;div class=&quot;gallery-controls&quot;&gt;
+  &lt;a href=&quot;{{prevUrl}}&quot; class=&quot;gallery-controls__btn gallery-controls__btn--prev&quot;
+      data-bind=&quot;click: gotoPrevSlide,
+                  clickBubble: false,
+                  visible: !isTitleCardVisible(),
+                  css: {'is-disabled' : pauseGallery()}&quot;&gt;
+    &lt;svg class=&quot;gallery-controls__btn-icon gallery-controls__btn-icon--prev&quot;&gt;
+      &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-gallery-arrow-prev&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+  &lt;/a&gt;
+  &lt;a href=&quot;{{nextUrl}}&quot; class=&quot;gallery-controls__btn gallery-controls__btn--next&quot;
+      data-bind=&quot;click: gotoNextSlide,
+                  clickBubble: false,
+                  css: {
+                    'is-disabled' : pauseGallery(),
+                    'gallery-controls__btn--start': isTitleCardVisible()
+                  }&quot;&gt;
+    &lt;span class=&quot;gallery-controls__btn-start-text&quot; data-bind=&quot;visible: isTitleCardVisible()&quot;&gt;Start&lt;/span&gt;
+    &lt;svg class=&quot;gallery-controls__btn-icon gallery-controls__btn-icon--next&quot;&gt;
+      &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-gallery-arrow-next&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/div&gt;

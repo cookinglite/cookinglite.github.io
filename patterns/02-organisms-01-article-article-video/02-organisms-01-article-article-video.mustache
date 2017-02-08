@@ -1,0 +1,16 @@
+{{#stretch?}}
+  &lt;div class=&quot;video-wrap article__media article__media--stretch&quot;&gt;
+{{/stretch?}}
+
+&lt;div class=&quot;embed-container--with-caption&quot;&gt;
+  &lt;div class=&quot;embed-container-centered&quot;&gt;
+      {{&gt; atoms-brightcove }}
+  &lt;/div&gt;
+  &lt;div class=&quot;embed-caption media__text media__caption&quot;&gt;
+    {{{caption}}}
+  &lt;/div&gt;
+&lt;/div&gt;
+
+{{#stretch?}}
+  &lt;/div&gt;
+{{/stretch?}}

@@ -1,0 +1,14 @@
+{{#main_image}}
+    {{&gt; organisms-article-media }}
+{{/main_image}}
+
+{{! Hierarchy condition check and context set. }}
+{{#author}}
+  {{# article_meta}}
+    {{&gt; organisms-article-meta }}
+  {{/ article_meta}}
+{{/author}}
+
+{{#deck}}
+    {{&gt; organisms-article-lead }}
+{{/deck}}

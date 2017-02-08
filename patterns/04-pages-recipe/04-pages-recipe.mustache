@@ -1,0 +1,48 @@
+{{&lt; templates-two-col-content-sw-sidebar }}
+
+  {{$ top }}
+    {{#site_header}}
+        {{&gt; organisms-site-header }}
+    {{/site_header}}
+  {{/ top }}
+
+  {{$ main_header }}
+    {{#header}}
+        {{&gt; organisms-article-header-top }}
+    {{/header}}
+  {{/ main_header }}
+
+  {{$ main_top }}
+      {{#header}}
+        {{&gt; organisms-recipe-header-alt }}
+        {{&gt; organisms-recipe-related-videos }}
+      {{/header}}
+  {{/ main_top }}
+
+  {{$ main_left }}
+    {{#content_sidebar}}
+      {{&gt; organisms-recipe-sidebar }}
+    {{/content_sidebar}}
+  {{/ main_left }}
+
+  {{$ main_right }}
+    {{&gt; organisms-recipe-main-content }}
+  {{/ main_right }}
+
+  {{$ main_bottom }}
+    {{&gt; organisms-livefyre }}
+    {{&gt; organisms-recipe-bottom }}
+  {{/ main_bottom }}
+
+  {{$ sidebar_content }}
+
+    {{&gt; templates-sidebar }}
+
+  {{/ sidebar_content }}
+
+{{/ templates-two-col-content-sw-sidebar }}
+
+{{#embed_js?}}
+    {{!&gt; molecules-ads-js-include}}
+    {{&gt; organisms-livefyre-cozi-js}}
+{{/embed_js?}}

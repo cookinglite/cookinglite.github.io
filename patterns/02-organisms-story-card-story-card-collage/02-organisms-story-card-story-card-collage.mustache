@@ -1,0 +1,15 @@
+&lt;div class=&quot;collage&quot;&gt;
+
+{{#columns}}
+  &lt;div class=&quot;collage__column&quot;&gt;
+    {{#items}}
+      &lt;div class=&quot;collage__item {{#stamp?}}collage__item--stamped{{/stamp?}}&quot;&gt;
+        {{&gt; organisms-story-card }}
+
+        {{&gt; organisms-simple-subscribe }}
+      &lt;/div&gt;
+    {{/items}}
+  &lt;/div&gt;
+{{/columns}}
+
+&lt;/div&gt;

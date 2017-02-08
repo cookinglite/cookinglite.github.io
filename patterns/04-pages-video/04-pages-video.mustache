@@ -1,0 +1,22 @@
+{{&lt; templates-full-width-layout }}
+
+  {{$ header }}
+    {{&gt; organisms-site-header }}
+  {{/ header }}
+
+  {{$ main }}
+
+    {{#page.content}}
+        {{{page.content}}}
+    {{/page.content}}
+    {{^page.content}}
+      {{&gt; templates-video }}
+    {{/page.content}}
+
+  {{/ main }}
+
+  {{$ footer }}
+    {{&gt; organisms-site-footer }}
+  {{/ footer }}
+
+{{/ templates-full-width-layout }}

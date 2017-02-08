@@ -1,0 +1,36 @@
+{{#responsive_content_slider}}
+
+  &lt;div class=&quot;content-slider content-slider--responsive&quot;
+    data-js-component=&quot;responsiveContentSlider&quot;
+    data-slider-target=&quot;.content-slider__wrapper&quot;&gt;
+
+    {{#accent_header}}
+      {{&gt; molecules-accent-header }}
+    {{/accent_header}}
+
+    &lt;div class=&quot;content-slider__controls&quot;&gt;
+      &lt;span class=&quot;content-slider__btn content-slider__btn--prev&quot;&gt;
+        &lt;svg class=&quot;content-slider__btn-icon content-slider__btn-icon--prev&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-gallery-arrow-prev&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+      &lt;/span&gt;
+      &lt;span class=&quot;content-slider__btn content-slider__btn--next&quot;&gt;
+        &lt;svg class=&quot;content-slider__btn-icon content-slider__btn-icon--next&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-gallery-arrow-next&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;content-slider__wrapper&quot;&gt;
+      {{#items}}
+        &lt;div class=&quot;content-slider__slide&quot;&gt;
+          {{&gt; organisms-story-card }}
+        &lt;/div&gt;
+      {{/items}}
+    &lt;/div&gt;
+
+    {{#cta}}
+      &lt;a href=&quot;{{url}}&quot; class=&quot;btn btn--centered link-with-arrow&quot;&gt;{{text}}&lt;/a&gt;
+    {{/cta}}
+  &lt;/div&gt;
+{{/responsive_content_slider}}

@@ -1,0 +1,26 @@
+&lt;div class=&quot;search-results-grid&quot;&gt;
+  {{#results_message}}
+  {{&gt; organisms-search-results-message }}
+  {{/results_message}}
+
+  {{#results_header}}
+  {{&gt; organisms-search-results-header }}
+  {{/results_header}}
+
+  &lt;div class=&quot;search-results-grid-wrap&quot;&gt;
+    {{#results}}
+      {{#items}}
+        {{#ad}}
+          &lt;div class=&quot;search-results-ad&quot;&gt;
+            {{&gt; molecules-ads-300x250 }}
+          &lt;/div&gt;
+        {{/ad}}
+
+        {{^ad}}
+          {{&gt; organisms-search-results-card }}
+        {{/ad}}
+
+      {{/items}}
+    {{/results}}
+  &lt;/div&gt;
+&lt;/div&gt;

@@ -1,0 +1,10 @@
+&lt;div class=&quot;recipe-meta&quot;&gt;
+  {{#sections}}
+    &lt;div class=&quot;recipe-meta__section&quot;&gt;
+      &lt;span class=&quot;recipe-meta__label&quot;&gt;{{label}}&lt;/span&gt;
+      &lt;span class=&quot;recipe-meta__text&quot;
+        {{#schema}}itemprop=&quot;{{schema}}&quot;{{/schema}} {{#ISOformat}}content=&quot;{{ISOformat}}&quot;{{/ISOformat}}&gt;{{{text}}}&lt;/span&gt;
+    &lt;/div&gt;
+  {{/sections}}
+
+&lt;/div&gt;

@@ -1,0 +1,23 @@
+{{!
+*
+* Social Share Module
+*
+* @param array items          Array of social share icon data to be included to create the social share icon
+* @param string url           URL for social sharing capabilities on each link
+* @param string icon          Name of icon to display for each link
+*
+* @param boolean is_vertial?   Sets layout of module to be vertical, if not included layout is horizontal, is optional.
+*
+* Included partial
+* svg-use-tag                 Molecule to include &lt;use&gt; tag for each SVG. Takes {icon} variable from items objects.
+*
+}}
+&lt;div class=&quot;social-share {{#is_vertical?}}social-share--vertical{{/is_vertical?}}&quot;&gt;
+  {{#items}}
+    &lt;a target=&quot;_blank&quot; href=&quot;{{url}}&quot; class=&quot;social-share__item social-share__item--{{icon}} &quot; {{#src}}data-img-src=&quot;{{src}}&quot;{{/src}}&gt;
+      &lt;svg class=&quot;social-share__icon social-share__icon--{{icon}}&quot;&gt;
+         {{&gt;molecules-svg-use-tag}}
+      &lt;/svg&gt;
+    &lt;/a&gt;
+  {{/items}}
+&lt;/div&gt;

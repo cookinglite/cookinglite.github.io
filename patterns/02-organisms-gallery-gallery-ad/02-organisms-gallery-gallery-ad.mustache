@@ -1,0 +1,9 @@
+&lt;div class=&quot;gallery__ad&quot;&gt;
+  &lt;div id=&quot;gallery__ad-container&quot; data-bind=&quot;adContainer&quot;&gt;
+    &lt;div  class=&quot;ad-placeholder ad-refresh&quot; id=&quot;ad-gallery_interstitial_ad&quot; data-id=&quot;gallery_interstitial_ad&quot; data-type=&quot;regular&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;skip-ad&quot; data-bind=&quot;visible: $parent.adTimer.isActive()&quot;&gt;Skip ad in &lt;span class=&quot;skip-ad-count&quot; data-bind=&quot;text: $parent.adTimer.secondsElapsed&quot;&gt;&lt;/span&gt; seconds&lt;/span&gt;
+  &lt;a class=&quot;skip-ad skip-ad-link&quot; href=&quot;&lt;?php print $next_slide_url; ?&gt;&quot;
+    data-bind=&quot;visible: !$parent.adTimer.isActive(),
+                click: $parent.skipAdSlide&quot;&gt;Skip Ad&lt;/a&gt;
+&lt;/div&gt;

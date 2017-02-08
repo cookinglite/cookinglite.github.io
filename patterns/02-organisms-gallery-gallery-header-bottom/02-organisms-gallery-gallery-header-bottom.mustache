@@ -1,0 +1,22 @@
+{{#intro_slide}}&lt;script id=&quot;gallery-header-bottom&quot; type=&quot;text/html&quot;&gt;{{/intro_slide}}
+&lt;header class=&quot;gallery__header article__header {{#list_view}}gallery__header--list-view{{/list_view}} {{^list_view}}gallery__header--gallery-view{{/list_view}}&quot;&gt;
+  {{#main_image}}
+    {{&gt; organisms-article-media }}
+  {{/main_image}}
+
+  {{#author}}
+    {{# article_meta}}
+      {{&gt; organisms-article-meta }}
+    {{/ article_meta}}
+  {{/author}}
+
+  {{#deck}}
+      {{&gt; organisms-article-leader }}
+  {{/deck}}
+
+  {{#description}}
+    {{&gt; organisms-gallery-description }}
+  {{/description}}
+
+&lt;/header&gt;
+{{#intro_slide}}&lt;/script&gt;{{/intro_slide}}

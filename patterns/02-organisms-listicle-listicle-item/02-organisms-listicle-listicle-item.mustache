@@ -1,0 +1,38 @@
+&lt;li class=&quot;listicle__item custom-list__item {{#right?}}listicle__item--sbs{{/right?}}&quot;&gt;
+  &lt;span class=&quot;listicle__item-title&quot;&gt;{{title}}&lt;/span&gt;
+
+  {{#media}}
+    {{^video}}
+      &lt;figure class=&quot;media listicle__media {{#right?}}listicle__media--pulled-right{{/right?}}&quot;&gt;
+        &lt;div class=&quot;media-wrap&quot;&gt;
+          &lt;img class=&quot;media__img&quot; {{^lazyLoad}}src=&quot;{{media_src}}&quot;{{/lazyLoad}} alt=&quot;{{media_alt}}&quot; {{#lazyLoad}} data-js-component=&quot;imgLazyLoad&quot; data-original=&quot;{{media_src}}&quot; src=&quot;{{placeholder_media_src}}&quot; {{/lazyLoad}}&gt;
+
+          {{#social_share}}
+            {{&gt; molecules-social-share }}
+          {{/social_share}}
+        &lt;/div&gt;
+        &lt;figcaption&gt;
+          {{#credit}}
+            &lt;span class=&quot;media__text media__credit&quot;&gt;{{credit}}&lt;/span&gt;
+          {{/credit}}
+        &lt;/figcaption&gt;
+      &lt;/figure&gt;
+    {{/video}}
+
+    {{#video}}
+      &lt;div class=&quot;embed-container--with-caption&quot;&gt;
+        &lt;div class=&quot;embed-container&quot;&gt;
+          {{&gt; atoms-video }}
+        &lt;/div&gt;
+        &lt;div class=&quot;embed-credit media__text media__caption&quot;&gt;
+          {{{credit}}}
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    {{/video}}
+  {{/media}}
+
+  &lt;div class=&quot;listicle__item-content&quot;&gt;
+    {{content}}
+  &lt;/div&gt;
+&lt;/li&gt;

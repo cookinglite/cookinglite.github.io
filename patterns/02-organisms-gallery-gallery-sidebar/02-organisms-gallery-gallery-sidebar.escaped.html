@@ -1,0 +1,29 @@
+ 
+     &lt;div class=&quot;ad ad-mtac ad-350x250 show-at-sm&quot; id=&quot;ad-300x350-0000001&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  var tgx_ad_callback_ad_300x350_0000001 = function (event, sizes, breakpoint, oldBreakpoint) {
+      if (event === 'render' &amp;&amp; this.id == 'ad-300x350-0000001') {
+      }
+      else if (event === 'remove') {
+      }
+      else if (event === 'rendered') {
+      }
+  };
+
+  tgx_ad_slots.push(function(ads){
+      ads.addSlot({
+          id: 'ad-300x350-0000001',
+          responsive: {
+              md: {sizes: ['300x250'], callback: tgx_ad_callback_ad_300x350_0000001 },
+              lg: {sizes: ['300x250'], callback: tgx_ad_callback_ad_300x350_0000001 },
+              xl: {sizes: ['300x250'], callback: tgx_ad_callback_ad_300x350_0000001 }
+          },
+
+          position: 0000001,
+          defer: 150,
+          trackview: true
+      });
+
+  });
+&lt;/script&gt;
+   

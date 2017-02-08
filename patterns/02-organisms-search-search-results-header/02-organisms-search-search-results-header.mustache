@@ -1,0 +1,18 @@
+&lt;div class=&quot;search-results-header&quot;&gt;
+
+  &lt;h2 class=&quot;search-results-count&quot;&gt;{{text}}&lt;/h2&gt;
+
+  {{#active_search}}
+  &lt;form action=&quot;#&quot; class=&quot;active-search-form&quot;&gt;
+
+    &lt;div class=&quot;active-search-form__terms-wrap&quot;&gt;
+      {{#items}}
+      {{&gt; molecules-custom-filter-checkbox }}
+      {{/items}}
+    &lt;/div&gt;
+
+    &lt;button class=&quot;active-search-form__btn&quot; value=&quot;clearall&quot;&gt;Clear All&lt;/button&gt;
+
+  &lt;/form&gt;
+  {{/active_search}}
+&lt;/div&gt;

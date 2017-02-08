@@ -1,0 +1,16 @@
+{{#recipe_utility_links}}
+
+  &lt;div class=&quot;recipe-utility-links social-share&quot;&gt;
+    {{#items}}
+      &lt;div class=&quot;recipe-utility-links__link&quot; &gt;
+        &lt;a class=&quot;social-share__item social-share__item--{{icon}}&quot; href=&quot;{{url}}&quot;&gt;
+          &lt;svg class=&quot;social-share__icon social-share__icon--{{icon}}&quot;&gt;
+            &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-{{ icon }}&quot;&gt;&lt;/use&gt;
+          &lt;/svg&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;recipe-utility-links__link-label&quot;&gt;{{label}}&lt;/div&gt;
+      &lt;/div&gt;
+    {{/items}}
+  &lt;/div&gt;
+
+{{/recipe_utility_links}}

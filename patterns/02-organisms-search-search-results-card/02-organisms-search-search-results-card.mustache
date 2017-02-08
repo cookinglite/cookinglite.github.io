@@ -1,0 +1,58 @@
+&lt;div class=&quot;search-results-card {{#social_share}}has-social-share{{/social_share}}&quot;&gt;
+  &lt;div class=&quot;search-results-card__media&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;search-results-card__link&quot;&gt;
+      &lt;div class=&quot;media-wrap&quot;&gt;
+        &lt;img src=&quot;http://placehold.it/300x300&quot; alt=&quot;&quot;&gt;
+
+        {{#video}}
+          &lt;div class=&quot;embed-container-centered&quot;&gt;
+            &lt;!-- Start of Brightcove Player --&gt;
+            &lt;div style=&quot;display:none&quot;&gt;&lt;/div&gt;
+            &lt;!--
+            By use of this code snippet, I agree to the Brightcove Publisher T and C
+            found at https://accounts.brightcove.com/en/terms-and-conditions/.
+            --&gt;
+            &lt;script type=&quot;text/javascript&quot; src=&quot;http://admin.brightcove.com/js/BrightcoveExperiences.js&quot;&gt;&lt;/script&gt;
+            &lt;div itemprop=&quot;video&quot; itemscope=&quot;&quot; itemtype=&quot;http://schema.org/VideoObject&quot;&gt;
+
+              &lt;div class=&quot;containing-block&quot;&gt;
+              &lt;meta itemprop=&quot;name&quot; content=&quot;Cooking Class Video: Grilling&quot;&gt;
+              &lt;meta itemprop=&quot;description&quot; content=&quot;Cooking Light Food Editors Ann Pittman and Julie Grimes show you how to grill for perfect results.&quot;&gt;
+              &lt;meta itemprop=&quot;duration&quot; content=&quot;T2M37S&quot;&gt;
+              &lt;meta itemprop=&quot;thumbnailUrl&quot; content=&quot;http://www.cookinglight.local/sites/default/files/image/2008/06/cc-grillchicken-0806p143-m.jpg&quot;&gt;
+              &lt;meta itemprop=&quot;embedURL&quot; content=&quot;http://admin.brightcove.com/viewer/us20120509.1612/BrightcoveBootloader.swf?playerID=2448899952001&amp;amp;%40videoPlayer=1568084586&amp;amp;bgcolor=%23000000&amp;amp;dynamicStreaming=true&amp;amp;flashID=myExperience&amp;amp;isUI=true&amp;amp;isVid=true&amp;amp;videoSmoothing=true&amp;amp;wmode=transparent&quot;&gt;
+              &lt;meta itemprop=&quot;uploadDate&quot; content=&quot;2008-10-06T15:53:39+00:00&quot;&gt;
+              &lt;div id=&quot;container1&quot; class=&quot;outer-container&quot;&gt;
+              &lt;object type=&quot;application/x-shockwave-flash&quot; id=&quot;myExperience-1568084586&quot; width=&quot;640&quot; height=&quot;360&quot; class=&quot;BrightcoveExperience BrightcoveExperienceID_2237&quot; seamlesstabbing=&quot;undefined&quot; data=&quot;http://c.brightcove.com/services/viewer/federated_f9?&amp;amp;width=640&amp;amp;height=360&amp;amp;flashID=myExperience-1568084586&amp;amp;identifierClassName=BrightcoveExperienceID_2237&amp;amp;bgcolor=%23FFFFFF&amp;amp;autoStart=false&amp;amp;playerID=2448899952001&amp;amp;playerKey=AQ~~%2CAAAAAEsjegg~%2CPOvxKIwUutPG2iLIi4rfCnHra5ruZdlj&amp;amp;isVid=true&amp;amp;isUI=true&amp;amp;dynamicStreaming=true&amp;amp;includeAPI=true&amp;amp;templateLoadHandler=myTemplateLoaded&amp;amp;%40videoPlayer=1568084586&amp;amp;debuggerID=&amp;amp;startTime=1466782039115&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;seamlessTabbing&quot; value=&quot;false&quot;&gt;&lt;param name=&quot;swliveconnect&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;wmode&quot; value=&quot;window&quot;&gt;&lt;param name=&quot;quality&quot; value=&quot;high&quot;&gt;&lt;param name=&quot;bgcolor&quot; value=&quot;#FFFFFF&quot;&gt;&lt;/object&gt;
+              &lt;script type=&quot;text/javascript&quot; src=&quot;http://admin.brightcove.com/js/api/SmartPlayerAPI.js&quot;&gt;&lt;/script&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script type=&quot;text/javascript&quot;&gt;brightcove.createExperiences();&lt;/script&gt;
+            &lt;!-- End of Brightcove Player --&gt;
+          &lt;/div&gt;
+        {{/video}}
+      &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;search-results-card__share&quot;&gt;
+        {{#social_share}}
+            {{&gt; molecules-social-share }}
+        {{/social_share}}
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+  &lt;div class=&quot;search-results-card__body&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;search-results-card__title&quot;&gt;{{title}}&lt;/a&gt;
+    &lt;div class=&quot;search-results-card__text&quot;&gt;
+      {{text}}
+    &lt;/div&gt;
+
+    {{#content_rating}}
+      {{&gt; molecules-content-rating }}
+    {{/content_rating}}
+
+    {{#recipe_level}}
+    &lt;span class=&quot;recipe-level&quot;&gt;{{recipe_level}}&lt;/span&gt;
+    {{/recipe_level}}
+  &lt;/div&gt;
+&lt;/div&gt;

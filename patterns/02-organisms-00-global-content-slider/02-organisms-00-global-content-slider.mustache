@@ -1,0 +1,37 @@
+{{#content_slider}}
+&lt;div class=&quot;content-slider&quot; data-js-component=&quot;contentSlider&quot; data-slider-target=&quot;.content-slider__wrapper&quot; data-slider-controls=&quot;.content-slider__controls&quot;&gt;
+  &lt;div class=&quot;content-slider__controls&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;content-slider__btn content-slider__btn--prev&quot;&gt;
+      &lt;svg class=&quot;content-slider__btn-icon content-slider__btn-icon--prev&quot;&gt;
+        &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-gallery-arrow-prev&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;content-slider__btn content-slider__btn--next&quot;&gt;
+      &lt;svg class=&quot;content-slider__btn-icon content-slider__btn-icon--next&quot;&gt;
+        &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;{{ svg_sprite_path  }}#icon-gallery-arrow-next&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;content-slider__wrapper&quot;&gt;
+
+    {{#items}}
+      &lt;a href=&quot;{{url}}&quot; class=&quot;content-slider__slide&quot;&gt;
+        &lt;div class=&quot;media-wrap&quot;&gt;
+          {{&gt; atoms-four-by-three }}
+          &lt;div class=&quot;content-slider__caption&quot;&gt;
+            {{#caption}}
+              {{caption}}
+            {{/caption}}
+
+            {{#cta}}
+              &lt;span class=&quot;content-slider__cta link-with-arrow link-with-arrow--fresh&quot;&gt;{{cta}}&lt;/span&gt;
+            {{/cta}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    {{/items}}
+
+  &lt;/div&gt;
+&lt;/div&gt;
+{{/content_slider}}

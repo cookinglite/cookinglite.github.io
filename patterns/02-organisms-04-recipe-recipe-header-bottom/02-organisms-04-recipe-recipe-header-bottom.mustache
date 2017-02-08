@@ -1,0 +1,22 @@
+{{#main_image}}
+    {{&gt; organisms-article-media }}
+{{/main_image}}
+
+{{! Hierarchy condition check and context set. }}
+{{#author}}
+  {{# article_meta}}
+    {{&gt; organisms-article-meta }}
+  {{/ article_meta}}
+{{/author}}
+
+{{#recipe_meta}}
+{{&gt; organisms-recipe-meta }}
+{{/recipe_meta}}
+
+{{#recipe_description}}
+{{&gt; organisms-recipe-description }}
+{{/recipe_description}}
+
+{{#recipe_meta_footer}}
+{{&gt; organisms-recipe-meta-footer }}
+{{/recipe_meta_footer}}

@@ -1,0 +1,23 @@
+{{&lt; templates-two-col-content-sw-sidebar-with-header }}
+
+  {{$ header }}
+    {{&gt; organisms-site-header }}
+  {{/ header }}
+
+  {{$ main_top }}
+    {{&gt; organisms-package-header }}
+  {{/ main_top }}
+
+  {{$ main_content }}
+    {{&gt; organisms-package-body }}
+  {{/ main_content }}
+
+  {{$ sidebar_content }}
+    {{&gt; templates-sidebar }}
+  {{/ sidebar_content }}
+
+{{/ templates-two-col-content-sw-sidebar-with-header }}
+
+{{#embed_js?}}
+    {{&gt; molecules-ads-js-include}}
+{{/embed_js?}}

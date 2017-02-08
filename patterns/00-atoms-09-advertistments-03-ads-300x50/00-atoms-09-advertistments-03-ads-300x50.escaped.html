@@ -1,0 +1,30 @@
+&lt;script&gt;
+
+
+    var tgx_ad_callback_ad_300x50 = function (event, sizes, breakpoint, oldBreakpoint) {
+        if (event === 'render' &amp;&amp; this.id == 'ad-300x50') {
+
+        }
+        else if (event === 'remove') {
+
+        }
+        else if (event === 'rendered') {
+
+        }
+    };
+
+    tgx_ad_slots.push(function(ads){
+
+        ads.addSlot({
+            id: 'ad-300x50',
+            responsive: {
+                sm: {sizes: ['300x50','320x50'], callback: tgx_ad_callback_ad_300x50 }
+            },
+            
+            position: 1,
+            defer: 150
+        });
+
+    });
+
+&lt;/script&gt;
